@@ -39,7 +39,7 @@ class Trainer(object):
         name = get_name(self.args)
         log_dir = f'{self.args.log_dir}{self.args.dataset}{self.args.train_mode}/'
         if not exists(log_dir):
-            mkdir(log_dir)
+            makedirs(log_dir)
         self.logger = get_logger(name, log_dir)
         self.logger.info(self.args)
         writer = SummaryWriter(self.args.tensorboard_dir + self.args.dataset + name)

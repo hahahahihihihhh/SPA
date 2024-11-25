@@ -147,7 +147,7 @@ class TemporalDataset(Dataset):
 def load_fact_name(dataset_path):
     id2name_dict = defaultdict(dict)
     for filename, mode in zip(['entity2id.txt', 'relation2id.txt'], ['entity', 'relation']):
-        with open(join(dataset_path, filename), 'r') as fr:
+        with open(join(dataset_path, filename), 'r', encoding = 'utf-8') as fr:
             for line in fr:
                 name, idx = tuple(map(str, line.split('\t')))
                 id2name_dict[mode][int(idx)] = name

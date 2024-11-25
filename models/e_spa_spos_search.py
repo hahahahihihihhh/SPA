@@ -123,6 +123,8 @@ class ESPASPOSSearch(Module):
         for i, layer in enumerate(self.g_layers):
             lc_list = []
             lc_list.append(graph.ndata["ft"])
+            print(self.ops)
+            exit(0)
             graph = layer(graph, self.ops[3 * i])
             adjusted_prev_graph_embeds = prev_graph_embeds_list[i] * torch.exp(-time_diff_tensor * self.inv_temperature)
             lf_list.append(self.t_layers[i](graph.ndata["ft"].unsqueeze(0),

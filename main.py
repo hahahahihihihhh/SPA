@@ -12,39 +12,47 @@ import torch
 
 def main():
     parser = argparse.ArgumentParser(description="Search to Pass Messages for Temporal Knowledge Completion")
+    # Commmon config
     parser.add_argument("--dataset", type=str, default="icews14/")
+    parser.add_argument("--random_seed", type=int, default=22)
+    parser.add_argument("--batch_size", type=int, default=8)
+    parser.add_argument("--max_epoch", type=int, default=200)
+    parser.add_argument("--learning_rate", type=float, default=0.005)
+    parser.add_argument("--weight_decay", type=float, default=5e-4)
+
+    # Optimizer config
+    parser.add_argument("--optimizer", type=str, default="adam")
+    parser.add_argument("--momentum", type=float, default=0.9)
+
+    # Running config
     parser.add_argument("--train_mode", type=str, default="train",
                         choices=["search", "tune", "train", "debug"])
     parser.add_argument("--search_mode", type=str, default="",
                         choices=["random", "spos", "spos_search"])
-    parser.add_argument("--encoder", type=str, default="")
+
+    # Structure config
+    parser.add_argument("--encoder", type=str, default="SPASPOSSearch")
     parser.add_argument("--score_function", type=str, default="complex")
     parser.add_argument("--hidden_size", type=int, default=128)
     parser.add_argument("--embed_size", type=int, default=128)
-    parser.add_argument("--max_epoch", type=int, default=200)
-    parser.add_argument("--batch_size", type=int, default=8)
-    parser.add_argument("--random_seed", type=int, default=22)
     parser.add_argument("--gnn_layer_num", type=int, default=3)
     parser.add_argument("--rnn_layer_num",type=int, default=1)
     parser.add_argument("--dropout", type=float, default=0.1)
     # base vector config
-    parser.add_argument("--base_num", type=int, default=0)
+    parser.add_argument("--base_num", type=int, default=1)
     # RGAT config
     parser.add_argument("--head_num", type=int, default=4)
     # CompGCN config
     parser.add_argument("--comp_op", type=str, default="corr")
     parser.add_argument("--sampled_dataset", type=bool, default=False)
-    # Optimizer config
-    parser.add_argument("--optimizer", type=str, default="adam")
-    parser.add_argument("--learning_rate", type=float, default=0.005)
-    parser.add_argument("--momentum", type=float, default=0.9)
-    parser.add_argument("--weight_decay", type=float, default=5e-4)
+
     # Dynamic config
     parser.add_argument("--train_seq_len", type=int, default=8)
     parser.add_argument("--test_seq_len", type=int, default=8)
     parser.add_argument("--rec_only_last_layer", type=bool, default=True)
     parser.add_argument("--use_time_embedding", type=bool, default=False)
     parser.add_argument("--seq_head_num", type=int, default=4)
+
     # search config
     parser.add_argument("--baseline_sample_num", type=int, default=30)
     parser.add_argument("--search_run_num", type=int, default=1)
@@ -55,9 +63,11 @@ def main():
     parser.add_argument("--arch_learning_rate", type=float, default=0.01)
     parser.add_argument("--min_arch_learning_rate", type=float, default=0.0005)
     parser.add_argument("--arch_weight_decay", type=float, default=1e-3)
+
     # spos config
     parser.add_argument("--arch_sample_num", type=int, default=1000)
     parser.add_argument("--stand_alone_path", type=str, default='')
+
     # fine-tune config
     parser.add_argument("--tune_sample_num", type=int, default=20)
     parser.add_argument("--index", type=int, default=1)
