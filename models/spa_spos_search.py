@@ -8,3 +8,4 @@ class SPASPOSSearch(DynamicBaseModel):
         self.ent_encoder = ESPASPOSSearch(self.args, self.args.embed_size, self.args.hidden_size,
                                            self.args.embed_size,
                                            self.rel_num)
+        self.ent_encoder.ops = self.ent_encoder.generate_single_path()

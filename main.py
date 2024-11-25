@@ -27,7 +27,7 @@ def main():
     # Running config
     parser.add_argument("--train_mode", type=str, default="train",
                         choices=["search", "tune", "train", "debug"])
-    parser.add_argument("--search_mode", type=str, default="",
+    parser.add_argument("--search_mode", type=str, default="spos",
                         choices=["random", "spos", "spos_search"])
 
     # Structure config
@@ -89,6 +89,17 @@ def main():
     parser.add_argument("--inv_temperature", type=float, default=0.1)
     args = parser.parse_args()
     dataset_info_dict = load_dataset(args.dataset_dir + args.dataset)
+    # print(dataset_info_dict.keys())
+    for _k, _v in dataset_info_dict.items():
+        if (_k.endswith('num') or _k.endswith('timestamps') or _k == 'time2fact_dict'):
+            if (_k == 'time2fact_dict'):
+                print(_k, len(_v))
+            else:
+                if (_k.endswith('timestamps')):
+                    print(dataset_info_dict[_k])
+                    print(_k, len(_v))
+                else:
+                    print(_k)
     train_dataset = TemporalDataset(dataset_info_dict['train_timestamps'], toy=args.sampled_dataset)
     valid_dataset = TemporalDataset(dataset_info_dict['valid_timestamps'], toy=args.sampled_dataset)
     train_loader = DataLoader(dataset=train_dataset, batch_size=args.batch_size, shuffle=True, num_workers=0)
