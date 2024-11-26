@@ -282,15 +282,13 @@ class DynamicBaseModel(Module):
         r = self.rel_embeds[triplets[:, 1]]
         if corrupt_tail:
             s = ent_embed[triplets[:, 0]]
-            neg_o = all_embeds_g[neg_samples]
+            neg_o = all_embeds_g[neg_samples.long()]
             score = self.decoder(s, r, neg_o, score_function=self.args.score_function, mode='tail')
         else:
-            neg_s = all_embeds_g[neg_samples]
+            neg_s = all_embeds_g[neg_samples.long()]
             o = ent_embed[triplets[:, 2]]
             score = self.decoder(neg_s, r, o, score_function=self.args.score_function, mode='head')
-        # pprint(score.shape)
-        # exit(0)
-        predict_loss = F.cross_entropy(score, labels)
+        predict_loss = F.cross_entropy(score, labels.long())
         # predict_loss = F.binary_cross_entropy_with_logits(score, labels)
         predict_loss = torch.where(torch.isnan(predict_loss), torch.full_like(predict_loss, 0), predict_loss)
         return predict_loss
