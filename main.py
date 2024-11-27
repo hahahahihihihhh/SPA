@@ -13,7 +13,7 @@ import torch
 def main():
     parser = argparse.ArgumentParser(description="Search to Pass Messages for Temporal Knowledge Completion")
     # Commmon config
-    parser.add_argument("--dataset", type=str, default="icews14/")
+    parser.add_argument("--dataset", type=str, default="test/")
     parser.add_argument("--random_seed", type=int, default=22)
     parser.add_argument("--batch_size", type=int, default=8)
     parser.add_argument("--max_epoch", type=int, default=200)

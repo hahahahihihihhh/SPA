@@ -1,0 +1,3 @@
+road1	0
+road2	1
+rainy	2
