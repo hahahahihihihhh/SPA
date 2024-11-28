@@ -46,13 +46,15 @@ class Trainer(object):
         model = MODEL[self.args.encoder](self.args, self.dataset_info_dict, self.device)
         model = model.cuda()
         self.logger.info("Parameter size = %fMB", count_parameters_in_MB(model))
+        # print(model)
+        # for name, param in model.named_parameters():
+        #     print(f"Name: {name}, Shape: {param.shape}")
         self.optimizer = torch.optim.Adam(model.parameters(), lr=self.args.learning_rate, weight_decay=0.0001)
 
         best_val_mrr, best_test_mrr = 0.0, 0.0
         early_stop_cnt = 0
         for epoch in range(1, self.args.max_epoch + 1):
-            print(epoch)
-            training_loss = self.train_epoch(epoch, model, architect=None, lr=None, mode="train")
+            training_loss = self.train_epoch(epoch, model, architect=None, lr=None, mode="spos_train")
             valid_mrr, _ = self.evaluate_epoch(epoch, model, split="valid")
             if valid_mrr > best_val_mrr:
                 early_stop_cnt = 0

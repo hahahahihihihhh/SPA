@@ -344,6 +344,7 @@ class DynamicBaseModel(Module):
         g_list = []
         # s_lst = [t/15 for t in times]
         # print(s_lst)
+        print(times)
         for tim in t_list:
             # length = int(tim / time_unit) + 1
             # cur_seq_len = seq_len if seq_len <= length else length
