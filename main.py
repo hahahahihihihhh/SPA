@@ -47,8 +47,8 @@ def main():
     parser.add_argument("--sampled_dataset", type=bool, default=False)
 
     # Dynamic config
-    parser.add_argument("--train_seq_len", type=int, default=2)
-    parser.add_argument("--test_seq_len", type=int, default=2)
+    parser.add_argument("--train_seq_len", type=int, default=8)
+    parser.add_argument("--test_seq_len", type=int, default=8)
     parser.add_argument("--rec_only_last_layer", type=bool, default=True)
     parser.add_argument("--use_time_embedding", type=bool, default=False)
     parser.add_argument("--seq_head_num", type=int, default=4)

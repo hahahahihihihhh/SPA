@@ -344,7 +344,6 @@ class DynamicBaseModel(Module):
         g_list = []
         # s_lst = [t/15 for t in times]
         # print(s_lst)
-        print(times)
         for tim in t_list:
             # length = int(tim / time_unit) + 1
             # cur_seq_len = seq_len if seq_len <= length else length
@@ -503,6 +502,7 @@ class DynamicBaseModel(Module):
                     history_embeddings[i][layer_idx][node_idx].view(-1, self.args.embed_size))
                 layer_prev_embeddings_transformer_list[layer_idx].append(
                     hist_embeddings_transformer[:, i, layer_idx, node_idx.squeeze()])
+                exit(0)
             time_diff_tensor.append(cur_t - start_time_tensor[i][node_idx])
             local_attn_mask.append(attn_mask[:, i, node_idx.squeeze()])
         for layer_idx in range(self.args.gnn_layer_num):
