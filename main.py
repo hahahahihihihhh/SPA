@@ -14,25 +14,25 @@ def main():
     parser = argparse.ArgumentParser(description="Search to Pass Messages for Temporal Knowledge Completion")
     # Commmon config
     parser.add_argument("--dataset", type=str, default="test/")
-    parser.add_argument("--random_seed", type=int, default=22)
-    parser.add_argument("--batch_size", type=int, default=2)
+    parser.add_argument("--random_seed", type=int, default=1)   # 22
+    parser.add_argument("--batch_size", type=int, default=4)    # 8
     parser.add_argument("--max_epoch", type=int, default=200)
-    parser.add_argument("--learning_rate", type=float, default=0.005)
-    parser.add_argument("--weight_decay", type=float, default=5e-4)
 
     # Optimizer config
     parser.add_argument("--optimizer", type=str, default="adam")
+    parser.add_argument("--learning_rate", type=float, default=0.005)
     parser.add_argument("--momentum", type=float, default=0.9)
+    parser.add_argument("--weight_decay", type=float, default=5e-4)
 
     # Running config
-    parser.add_argument("--train_mode", type=str, default="train",
-                        choices=["search", "tune", "train", "debug"])
-    parser.add_argument("--search_mode", type=str, default="spos",
-                        choices=["random", "spos", "spos_search"])
+    parser.add_argument("--train_mode", type=str, default="search",
+                        choices=["search", "tune", "train", "debug"])   # train
+    parser.add_argument("--search_mode", type=str, default="spos_search",
+                        choices=["random", "spos", "spos_search"])  # ""
 
     # Structure config
-    parser.add_argument("--encoder", type=str, default="SPASPOSSearch")
-    parser.add_argument("--score_function", type=str, default="complex")
+    parser.add_argument("--encoder", type=str, default="SPASPOSSearch") # ""
+    parser.add_argument("--score_function", type=str, default="complex")   # complex
     parser.add_argument("--hidden_size", type=int, default=128)
     parser.add_argument("--embed_size", type=int, default=128)
     parser.add_argument("--gnn_layer_num", type=int, default=3)
@@ -65,7 +65,7 @@ def main():
     parser.add_argument("--arch_weight_decay", type=float, default=1e-3)
 
     # spos config
-    parser.add_argument("--arch_sample_num", type=int, default=1000)
+    parser.add_argument("--arch_sample_num", type=int, default=12)  # 1000
     parser.add_argument("--stand_alone_path", type=str, default='')
 
     # fine-tune config
@@ -79,7 +79,7 @@ def main():
     parser.add_argument("--time_log_dir", type=str, default="")
     parser.add_argument("--tensorboard_dir", type=str, default="tensorboard/")
     parser.add_argument("--saved_model_dir", type=str, default="saved_models/")
-    parser.add_argument("--weight_path", type=str, default='')
+    parser.add_argument("--weight_path", type=str, default='weights/test/search/spos/SPASPOSSearch/20241201_202118_1/epoch_2.pt')
     parser.add_argument("--fixed_ops", type=str, default='')
     parser.add_argument("--save_model", action="store_true")
     parser.add_argument("--search_res_dir", type=str, default="searched_res/")
@@ -89,16 +89,6 @@ def main():
     parser.add_argument("--inv_temperature", type=float, default=0.1)
     args = parser.parse_args()
     dataset_info_dict = load_dataset(args.dataset_dir + args.dataset)
-    # for _k, _v in dataset_info_dict.items():
-    #     if (_k.endswith('num') or _k.endswith('timestamps') or _k == 'time2fact_dict'):
-    #         if (_k == 'time2fact_dict'):
-    #             print(_k, len(_v))
-    #         else:
-    #             if (_k.endswith('timestamps')):
-    #                 print(dataset_info_dict[_k])
-    #                 print(_k, len(_v))
-    #             else:
-    #                 print(_k)
     train_dataset = TemporalDataset(dataset_info_dict['train_timestamps'], toy=args.sampled_dataset)
     valid_dataset = TemporalDataset(dataset_info_dict['valid_timestamps'], toy=args.sampled_dataset)
     train_loader = DataLoader(dataset=train_dataset, batch_size=args.batch_size, shuffle=True, num_workers=0)

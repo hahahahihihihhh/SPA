@@ -1,3 +1,199 @@
-road1	0
-road2	1
-rainy	2
+1	0
+10	1
+11	2
+12	3
+13	4
+14	5
+15	6
+17	7
+19	8
+2	9
+23	10
+3	11
+31	12
+34	13
+36	14
+39	15
+4	16
+47	17
+5	18
+54	19
+6	20
+7	21
+8	22
+9	23
+Broken_clouds.	24
+Clear.	25
+Fair	26
+Fog.	27
+Haze.	28
+Light_rain._Fog.	29
+Light_rain._More_clouds_than_sun.	30
+Light_rain._Mostly_cloudy.	31
+Light_rain._Passing_clouds.	32
+More_clouds_than_sun.	33
+Mostly_cloudy.	34
+Overcast.	35
+Partly_sunny.	36
+Passing_clouds.	37
+Rain._Mostly_cloudy.	38
+Rain._Passing_clouds.	39
+Scattered_clouds.	40
+Sprinkles._Passing_clouds.	41
+Sunny.	42
+road 101297	43
+road 101298	44
+road 101299	45
+road 101300	46
+road 101301	47
+road 101302	48
+road 101303	49
+road 101304	50
+road 101305	51
+road 101306	52
+road 101307	53
+road 102120	54
+road 102121	55
+road 102122	56
+road 102123	57
+road 102124	58
+road 102128	59
+road 102129	60
+road 102134	61
+road 102137	62
+road 102138	63
+road 103351	64
+road 103763	65
+road 103764	66
+road 103765	67
+road 104638	68
+road 111369	69
+road 111370	70
+road 111380	71
+road 111969	72
+road 111973	73
+road 111974	74
+road 112101	75
+road 112102	76
+road 112103	77
+road 112138	78
+road 112139	79
+road 112140	80
+road 112141	81
+road 112142	82
+road 112671	83
+road 112727	84
+road 112728	85
+road 112746	86
+road 116097	87
+road 116098	88
+road 116099	89
+road 116100	90
+road 116157	91
+road 116219	92
+road 116220	93
+road 116221	94
+road 117189	95
+road 90217	96
+road 90218	97
+road 90219	98
+road 90220	99
+road 90221	100
+road 90222	101
+road 90223	102
+road 90224	103
+road 90225	104
+road 90226	105
+road 92231	106
+road 92237	107
+road 92241	108
+road 92688	109
+road 92689	110
+road 92690	111
+road 92691	112
+road 92692	113
+road 92693	114
+road 92694	115
+road 92695	116
+road 92696	117
+road 92697	118
+road 92856	119
+road 92858	120
+road 92876	121
+road 92877	122
+road 92878	123
+road 92881	124
+road 92883	125
+road 92899	126
+road 92900	127
+road 93220	128
+road 93851	129
+road 93852	130
+road 94159	131
+road 94160	132
+road 94161	133
+road 94162	134
+road 94163	135
+road 94164	136
+road 95068	137
+road 95069	138
+road 95070	139
+road 95071	140
+road 95072	141
+road 95073	142
+road 95075	143
+road 95501	144
+road 95502	145
+road 95503	146
+road 95504	147
+road 95505	148
+road 95506	149
+road 95507	150
+road 95508	151
+road 95570	152
+road 95571	153
+road 95598	154
+road 95599	155
+road 95915	156
+road 95933	157
+road 95934	158
+road 95935	159
+road 95936	160
+road 95968	161
+road 95969	162
+road 95970	163
+road 95975	164
+road 96475	165
+road 96478	166
+road 96484	167
+road 96485	168
+road 96486	169
+road 96758	170
+road 96760	171
+road 96761	172
+road 97349	173
+road 98662	174
+road 98666	175
+road 98668	176
+road 98669	177
+road 98670	178
+road 98671	179
+road 98672	180
+road 99627	181
+road 99628	182
+road 99629	183
+road 99630	184
+road 99631	185
+road 99632	186
+road 99880	187
+road 99881	188
+road 99882	189
+road 99902	190
+road 99903	191
+road 99904	192
+road 99905	193
+road 99906	194
+road 99907	195
+road 99909	196
+road 99910	197
+road 99953	198

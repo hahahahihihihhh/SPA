@@ -341,7 +341,7 @@ class Trainer(object):
             writer = csv.writer(f)
             writer.writerow(['valid mrr', 'arch'])
             res = valid_mrr_searched_arch_res.items()
-            for i in range(500):
+            for i in range(min(500, self.args.arch_sample_num)):
                 writer.writerow([res[-1-i][0], res[-1-i][1]])
 
         return res[-1][1]

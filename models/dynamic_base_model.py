@@ -58,6 +58,9 @@ class DynamicBaseModel(Module):
                                                   self.train_seq_len - 1 - start_time_tensor[i])
             loss_tail = self.train_link_prediction(ent_embed, triplets, neg_tail_samples, labels, all_embeds_g,
                                                    corrupt_tail=True)
+            print(t, ent_embed.shape)
+            # print(list(g.edges))
+            # exit(0)
             loss_head = self.train_link_prediction(ent_embed, triplets, neg_head_samples, labels, all_embeds_g,
                                                    corrupt_tail=False)
             total_loss += loss_tail + loss_head
@@ -502,7 +505,6 @@ class DynamicBaseModel(Module):
                     history_embeddings[i][layer_idx][node_idx].view(-1, self.args.embed_size))
                 layer_prev_embeddings_transformer_list[layer_idx].append(
                     hist_embeddings_transformer[:, i, layer_idx, node_idx.squeeze()])
-                exit(0)
             time_diff_tensor.append(cur_t - start_time_tensor[i][node_idx])
             local_attn_mask.append(attn_mask[:, i, node_idx.squeeze()])
         for layer_idx in range(self.args.gnn_layer_num):
