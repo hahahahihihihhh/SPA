@@ -58,9 +58,8 @@ class DynamicBaseModel(Module):
                                                   self.train_seq_len - 1 - start_time_tensor[i])
             loss_tail = self.train_link_prediction(ent_embed, triplets, neg_tail_samples, labels, all_embeds_g,
                                                    corrupt_tail=True)
-            print(t, ent_embed.shape)
+            # print(t, ent_embed.shape)
             # print(list(g.edges))
-            # exit(0)
             loss_head = self.train_link_prediction(ent_embed, triplets, neg_head_samples, labels, all_embeds_g,
                                                    corrupt_tail=False)
             total_loss += loss_tail + loss_head

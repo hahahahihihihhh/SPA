@@ -5,6 +5,8 @@ from torch.utils.data import DataLoader
 from utils import initialize_seed
 from trainer import Trainer
 from time import strftime
+from os import makedirs
+from os.path import exists
 import argparse
 import torch
 
@@ -15,8 +17,8 @@ def main():
     # Commmon config
     parser.add_argument("--dataset", type=str, default="test/")
     parser.add_argument("--random_seed", type=int, default=1)   # 22
-    parser.add_argument("--batch_size", type=int, default=4)    # 8
-    parser.add_argument("--max_epoch", type=int, default=200)
+    parser.add_argument("--batch_size", type=int, default=2)    # 8
+    parser.add_argument("--max_epoch", type=int, default=10)    # 200
 
     # Optimizer config
     parser.add_argument("--optimizer", type=str, default="adam")
@@ -25,7 +27,7 @@ def main():
     parser.add_argument("--weight_decay", type=float, default=5e-4)
 
     # Running config
-    parser.add_argument("--train_mode", type=str, default="search",
+    parser.add_argument("--train_mode", type=str, default="tune",
                         choices=["search", "tune", "train", "debug"])   # train
     parser.add_argument("--search_mode", type=str, default="spos_search",
                         choices=["random", "spos", "spos_search"])  # ""
@@ -56,7 +58,7 @@ def main():
     # search config
     parser.add_argument("--baseline_sample_num", type=int, default=30)
     parser.add_argument("--search_run_num", type=int, default=1)
-    parser.add_argument("--search_max_epoch", type=int, default=800)
+    parser.add_argument("--search_max_epoch", type=int, default=10) # 800
     parser.add_argument("--min_learning_rate", type=float, default=0.001)
     parser.add_argument("--unrolled", action='store_true', default=False)
     parser.add_argument('--grad_clip', type=float, default=1)
@@ -69,7 +71,7 @@ def main():
     parser.add_argument("--stand_alone_path", type=str, default='')
 
     # fine-tune config
-    parser.add_argument("--tune_sample_num", type=int, default=20)
+    parser.add_argument("--tune_sample_num", type=int, default=2)   # 20
     parser.add_argument("--index", type=int, default=1)
     parser.add_argument("--negative_sampling_num", type=int, default=500)
     parser.add_argument("--isolated_change", type=bool, default=False)
@@ -79,12 +81,12 @@ def main():
     parser.add_argument("--time_log_dir", type=str, default="")
     parser.add_argument("--tensorboard_dir", type=str, default="tensorboard/")
     parser.add_argument("--saved_model_dir", type=str, default="saved_models/")
-    parser.add_argument("--weight_path", type=str, default='weights/test/search/spos/SPASPOSSearch/20241201_202118_1/epoch_2.pt')
+    parser.add_argument("--weight_path", type=str, default='weights/test/search/spos/SPASPOSSearch/20241202_150044_1/epoch_10.pt')  # ''
     parser.add_argument("--fixed_ops", type=str, default='')
     parser.add_argument("--save_model", action="store_true")
     parser.add_argument("--search_res_dir", type=str, default="searched_res/")
     parser.add_argument("--tune_res_dir", type=str, default="tune_res/")
-    parser.add_argument("--search_res_file", type=str, default="")
+    parser.add_argument("--search_res_file", type=str, default="searched_res/test/spos_search/20241202_153133.json")    # ''
     parser.add_argument("--arch", type=str, default="")
     parser.add_argument("--inv_temperature", type=float, default=0.1)
     args = parser.parse_args()
@@ -129,8 +131,11 @@ def main():
                 res_dict["search_mode"] = args.search_mode
                 res_dict["genotype"] = genotype
                 search_res.append(res_dict)
-        with open(args.search_res_dir + args.dataset + args.search_mode + f'/{start_running_time}.json', 'w') as f:
-            dump(search_res, f)
+        if (args.search_mode != "spos"):
+            if not exists(args.search_res_dir + args.dataset + args.search_mode):
+                makedirs(args.search_res_dir + args.dataset + args.search_mode)
+            with open(args.search_res_dir + args.dataset + args.search_mode + f'/{start_running_time}.json', 'w') as f:
+                dump(search_res, f)
     elif args.train_mode == "debug":
         trainer.cnt_tune = 0
         start_running_time = strftime("%Y%m%d_%H%M%S")

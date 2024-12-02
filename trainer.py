@@ -18,9 +18,8 @@ from sortedcontainers import SortedDict
 EPOCH_TEST = {"icews14/": 30,
               "icews05-15/": 10,
               "gdelt/": 30,
-              "wikidata11k/": 50}
-
-
+              "wikidata11k/": 50,
+              "test/": 5}
 class Trainer(object):
     cnt_tune = 0
 
@@ -54,7 +53,7 @@ class Trainer(object):
         best_val_mrr, best_test_mrr = 0.0, 0.0
         early_stop_cnt = 0
         for epoch in range(1, self.args.max_epoch + 1):
-            training_loss = self.train_epoch(epoch, model, architect=None, lr=None, mode="spos_train")
+            training_loss = self.train_epoch(epoch, model, architect=None, lr=None, mode="train")
             valid_mrr, _ = self.evaluate_epoch(epoch, model, split="valid")
             if valid_mrr > best_val_mrr:
                 early_stop_cnt = 0
@@ -174,7 +173,9 @@ class Trainer(object):
             if -d["loss"] > best_val_mrr:
                 best_val_mrr = -d["loss"]
                 best_test_mrr = d["test_mrr"]
-        with open(self.args.tune_res_dir + self.args.dataset + self.args.genotype, "w") as f1:
+        if not exists(self.args.tune_res_dir + self.args.dataset):
+            makedirs(self.args.tune_res_dir + self.args.dataset)
+        with open(self.args.tune_res_dir + self.args.dataset + self.args.genotype.replace('||', '_'), "w") as f1:
             f1.write(str(vars(self.args)) + "\n")
             f1.write(str(best_test_mrr))
 
@@ -313,7 +314,7 @@ class Trainer(object):
 
     def spos_arch_search(self):
         name = '_search_'+str(self.args.random_seed)
-        log_dir = self.args.weight_path.replace('weights', 'logs', 1).split('.')[0]
+        log_dir = self.args.weight_path.replace('weights', 'logs', 1).split('.')[0] + '/'
         if not exists(log_dir):
             makedirs(log_dir)
         self.logger = get_logger(name, log_dir)
