@@ -48,12 +48,12 @@ class Trainer(object):
         # print(model)
         # for name, param in model.named_parameters():
         #     print(f"Name: {name}, Shape: {param.shape}")
-        self.optimizer = torch.optim.Adam(model.parameters(), lr=self.args.learning_rate, weight_decay=0.0001)
+        self.optimizer = torch.optim.Adam(model.parameters(), lr=self.args.learning_rate, weight_decay=self.args.weight_decay)  # 0.0001
 
         best_val_mrr, best_test_mrr = 0.0, 0.0
         early_stop_cnt = 0
         for epoch in range(1, self.args.max_epoch + 1):
-            training_loss = self.train_epoch(epoch, model, architect=None, lr=None, mode="train")
+            training_loss = self.train_epoch(epoch, model, architect=self.args.arch, lr=None, mode="train")
             valid_mrr, _ = self.evaluate_epoch(epoch, model, split="valid")
             if valid_mrr > best_val_mrr:
                 early_stop_cnt = 0
@@ -62,7 +62,7 @@ class Trainer(object):
                 if test_mrr > best_test_mrr:
                     best_test_mrr = test_mrr
                     self.logger.info("Success")
-                    # torch.save(model.state_dict(), f'{args.saved_model_dir}{name}.pth')
+                    torch.save(model.state_dict(), f'{self.args.saved_model_dir}{name}.pth')
             else:
                 early_stop_cnt += 1
             if early_stop_cnt > 10:
@@ -144,6 +144,8 @@ class Trainer(object):
                 model.train()
                 if mode == "spos_train":
                     model.ent_encoder.ops = model.ent_encoder.generate_single_path()
+                else:
+                    model.ent_encoder.ops = architect
                 self.optimizer.zero_grad()
                 train_loss = model(train_timestamps)
                 train_loss_list.append(train_loss.item())

@@ -24,10 +24,10 @@ def main():
     parser.add_argument("--optimizer", type=str, default="adam")
     parser.add_argument("--learning_rate", type=float, default=0.005)
     parser.add_argument("--momentum", type=float, default=0.9)
-    parser.add_argument("--weight_decay", type=float, default=5e-4)
+    parser.add_argument("--weight_decay", type=float, default=10 ** -3.7394073245953328) # 5e-4
 
     # Running config
-    parser.add_argument("--train_mode", type=str, default="tune",
+    parser.add_argument("--train_mode", type=str, default="train",
                         choices=["search", "tune", "train", "debug"])   # train
     parser.add_argument("--search_mode", type=str, default="spos_search",
                         choices=["random", "spos", "spos_search"])  # ""
@@ -43,7 +43,7 @@ def main():
     # base vector config
     parser.add_argument("--base_num", type=int, default=1)
     # RGAT config
-    parser.add_argument("--head_num", type=int, default=4)
+    parser.add_argument("--head_num", type=int, default=8)  # 4
     # CompGCN config
     parser.add_argument("--comp_op", type=str, default="corr")
     parser.add_argument("--sampled_dataset", type=bool, default=False)
@@ -53,7 +53,7 @@ def main():
     parser.add_argument("--test_seq_len", type=int, default=8)
     parser.add_argument("--rec_only_last_layer", type=bool, default=True)
     parser.add_argument("--use_time_embedding", type=bool, default=False)
-    parser.add_argument("--seq_head_num", type=int, default=4)
+    parser.add_argument("--seq_head_num", type=int, default=8)  # 4
 
     # search config
     parser.add_argument("--baseline_sample_num", type=int, default=30)
@@ -87,7 +87,7 @@ def main():
     parser.add_argument("--search_res_dir", type=str, default="searched_res/")
     parser.add_argument("--tune_res_dir", type=str, default="tune_res/")
     parser.add_argument("--search_res_file", type=str, default="searched_res/test/spos_search/20241202_153133.json")    # ''
-    parser.add_argument("--arch", type=str, default="")
+    parser.add_argument("--arch", type=str, default="rgat_vanilla||gru||lc_skip||rgat_vanilla||identity||lc_skip||rgcn||identity||lf_max".split('||'))  # ''
     parser.add_argument("--inv_temperature", type=float, default=0.1)
     args = parser.parse_args()
     dataset_info_dict = load_dataset(args.dataset_dir + args.dataset)
