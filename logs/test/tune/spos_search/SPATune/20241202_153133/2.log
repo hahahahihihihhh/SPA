@@ -1,0 +1,34 @@
+2024-12-03 09:15:28,155 - [INFO] - Namespace(arch=['rgat_vanilla', 'gru', 'lc_skip', 'rgat_vanilla', 'identity', 'lc_skip', 'rgcn', 'identity', 'lf_max'], arch_learning_rate=0.01, arch_sample_num=12, arch_weight_decay=0.001, base_num=1, baseline_sample_num=30, batch_size=2, comp_op='corr', dataset='test/', dataset_dir='datasets/', dropout=0.1, embed_size=128, encoder='SPATune', fixed_ops='', genotype='rgat_vanilla||gru||lc_skip||rgat_vanilla||identity||lc_skip||rgcn||identity||lf_max', gnn_layer_num=3, grad_clip=1, head_num=2, hidden_size=128, index=2, inv_temperature=0.1, isolated_change=False, learning_rate=0.005, log_dir='logs/', max_epoch=10, min_arch_learning_rate=0.0005, min_learning_rate=0.001, momentum=0.9, negative_sampling_num=500, optimizer='adam', positive_fact_num=3000, random_seed=1, rec_only_last_layer=True, rnn_layer_num=1, sampled_dataset=False, save_model=False, saved_model_dir='saved_models/', score_function='complex', search_max_epoch=10, search_mode='spos_search', search_res_dir='searched_res/', search_res_file='searched_res/test/spos_search/20241202_153133.json', search_run_num=1, seq_head_num=2, stand_alone_path='', tensorboard_dir='tensorboard/', test_seq_len=8, time_log_dir='', train_mode='tune', train_seq_len=8, tune_res_dir='tune_res/', tune_sample_num=2, unrolled=False, use_time_embedding=False, weight_decay=0.0009155792642731608, weight_path='weights/test/search/spos/SPASPOSSearch/20241202_150044_1/epoch_10.pt')
+2024-12-03 09:15:28,201 - [INFO] - Parameter size = 0.225719MB
+2024-12-03 09:15:29,489 - [INFO] - [Epoch:1 | Tune]: Train Loss:28.55
+2024-12-03 09:15:30,247 - [INFO] - [Epoch:1 | Valid]: Loss:48.08, MRR:0.247, Hits@10:0.377, Hits@3:0.295, Hits@1:0.145
+2024-12-03 09:15:31,446 - [INFO] - [Epoch:2 | Tune]: Train Loss:20.57
+2024-12-03 09:15:32,211 - [INFO] - [Epoch:2 | Valid]: Loss:44.8, MRR:0.34, Hits@10:0.469, Hits@3:0.353, Hits@1:0.269
+2024-12-03 09:15:33,492 - [INFO] - [Epoch:3 | Tune]: Train Loss:17.23
+2024-12-03 09:15:34,245 - [INFO] - [Epoch:3 | Valid]: Loss:40.28, MRR:0.451, Hits@10:0.638, Hits@3:0.47, Hits@1:0.36
+2024-12-03 09:15:35,471 - [INFO] - [Epoch:4 | Tune]: Train Loss:14.87
+2024-12-03 09:15:36,218 - [INFO] - [Epoch:4 | Valid]: Loss:37.87, MRR:0.597, Hits@10:0.795, Hits@3:0.634, Hits@1:0.506
+2024-12-03 09:15:37,496 - [INFO] - [Epoch:5 | Tune]: Train Loss:12.6
+2024-12-03 09:15:38,254 - [INFO] - [Epoch:5 | Valid]: Loss:36.8, MRR:0.722, Hits@10:0.868, Hits@3:0.776, Hits@1:0.645
+2024-12-03 09:15:39,581 - [INFO] - [Epoch:6 | Tune]: Train Loss:10.07
+2024-12-03 09:15:40,377 - [INFO] - [Epoch:6 | Valid]: Loss:36.54, MRR:0.801, Hits@10:0.908, Hits@3:0.835, Hits@1:0.745
+2024-12-03 09:15:40,997 - [INFO] - [Epoch:6 | Test]: Loss:0.0, MRR:0.801, Hits@10:0.908, Hits@3:0.835, Hits@1:0.745
+2024-12-03 09:15:40,997 - [INFO] - Success
+2024-12-03 09:15:42,329 - [INFO] - [Epoch:7 | Tune]: Train Loss:8.253
+2024-12-03 09:15:43,097 - [INFO] - [Epoch:7 | Valid]: Loss:36.94, MRR:0.848, Hits@10:0.935, Hits@3:0.871, Hits@1:0.803
+2024-12-03 09:15:43,717 - [INFO] - [Epoch:7 | Test]: Loss:0.0, MRR:0.848, Hits@10:0.935, Hits@3:0.871, Hits@1:0.803
+2024-12-03 09:15:43,718 - [INFO] - Success
+2024-12-03 09:15:45,060 - [INFO] - [Epoch:8 | Tune]: Train Loss:6.698
+2024-12-03 09:15:46,313 - [INFO] - [Epoch:8 | Valid]: Loss:37.26, MRR:0.893, Hits@10:0.971, Hits@3:0.914, Hits@1:0.854
+2024-12-03 09:15:46,963 - [INFO] - [Epoch:8 | Test]: Loss:0.0, MRR:0.893, Hits@10:0.971, Hits@3:0.914, Hits@1:0.854
+2024-12-03 09:15:46,963 - [INFO] - Success
+2024-12-03 09:15:48,331 - [INFO] - [Epoch:9 | Tune]: Train Loss:5.41
+2024-12-03 09:15:49,129 - [INFO] - [Epoch:9 | Valid]: Loss:38.08, MRR:0.933, Hits@10:0.986, Hits@3:0.955, Hits@1:0.904
+2024-12-03 09:15:49,788 - [INFO] - [Epoch:9 | Test]: Loss:0.0, MRR:0.933, Hits@10:0.986, Hits@3:0.955, Hits@1:0.904
+2024-12-03 09:15:49,788 - [INFO] - Success
+2024-12-03 09:15:51,097 - [INFO] - [Epoch:10 | Tune]: Train Loss:4.613
+2024-12-03 09:15:51,846 - [INFO] - [Epoch:10 | Valid]: Loss:39.22, MRR:0.958, Hits@10:0.988, Hits@3:0.975, Hits@1:0.936
+2024-12-03 09:15:52,449 - [INFO] - [Epoch:10 | Test]: Loss:0.0, MRR:0.958, Hits@10:0.988, Hits@3:0.975, Hits@1:0.936
+2024-12-03 09:15:52,449 - [INFO] - Success
+2024-12-03 09:15:52,449 - [INFO] - Early stop!
+2024-12-03 09:15:52,449 - [INFO] - 0.9579318165779114 rgat_vanilla||gru||lc_skip||rgat_vanilla||identity||lc_skip||rgcn||identity||lf_max
