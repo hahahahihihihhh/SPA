@@ -50,7 +50,7 @@ class LfOpBlock(Module):
         return self._ops[LF_PRIMITIVES.index(primitive)](fts)
 
 class ESPASPOSSearch(Module):
-    def __init__(self, args, input_dim, hidden_dim, output_dim, rel_num, geotype):
+    def __init__(self, args, input_dim, hidden_dim, output_dim, rel_num):
         super(ESPASPOSSearch, self).__init__()
         self.args = args
         self.input_dim = input_dim
@@ -63,7 +63,7 @@ class ESPASPOSSearch(Module):
         self.lf_layers = ModuleList()
         self.t_layers = ModuleList()
         self.inv_temperature = 0.1
-        self.ops = geotype.split('||') if geotype else None
+        self.ops = None
         for idx in range(self.layer_num):
             if idx == 0:
                 self.g_layers.append(

@@ -24,16 +24,17 @@ def main():
     parser.add_argument("--optimizer", type=str, default="adam")
     parser.add_argument("--learning_rate", type=float, default=0.005)
     parser.add_argument("--momentum", type=float, default=0.9)
-    parser.add_argument("--weight_decay", type=float, default=10 ** -3.7394073245953328) # 5e-4
+    parser.add_argument("--weight_decay", type=float, default=10 ** -3.03830405163939) # 5e-4
 
     # Running config
     parser.add_argument("--train_mode", type=str, default="train",
                         choices=["search", "tune", "train", "debug"])   # train
-    parser.add_argument("--search_mode", type=str, default="spos_search",
+    parser.add_argument("--search_mode", type=str, default="",
                         choices=["random", "spos", "spos_search"])  # ""
 
     # Structure config
-    parser.add_argument("--encoder", type=str, default="SPASPOSSearch") # ""
+    parser.add_argument("--encoder", type=str, default="SPASPOSSearch",
+                        choices=["SPASPOSSearch", "SPATune"]) # ""
     parser.add_argument("--score_function", type=str, default="complex")   # complex
     parser.add_argument("--hidden_size", type=int, default=128)
     parser.add_argument("--embed_size", type=int, default=128)
@@ -43,7 +44,7 @@ def main():
     # base vector config
     parser.add_argument("--base_num", type=int, default=1)
     # RGAT config
-    parser.add_argument("--head_num", type=int, default=8)  # 4
+    parser.add_argument("--head_num", type=int, default=2)  # 4
     # CompGCN config
     parser.add_argument("--comp_op", type=str, default="corr")
     parser.add_argument("--sampled_dataset", type=bool, default=False)
@@ -53,7 +54,7 @@ def main():
     parser.add_argument("--test_seq_len", type=int, default=8)
     parser.add_argument("--rec_only_last_layer", type=bool, default=True)
     parser.add_argument("--use_time_embedding", type=bool, default=False)
-    parser.add_argument("--seq_head_num", type=int, default=8)  # 4
+    parser.add_argument("--seq_head_num", type=int, default=2)  # 4
 
     # search config
     parser.add_argument("--baseline_sample_num", type=int, default=30)
