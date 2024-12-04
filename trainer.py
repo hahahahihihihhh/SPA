@@ -1,3 +1,5 @@
+import json
+
 from model_list import MODEL
 from utils import get_metrics, get_logger, get_name, count_parameters_in_MB
 from torch.utils.tensorboard import SummaryWriter
@@ -63,6 +65,10 @@ class Trainer(object):
                     best_test_mrr = test_mrr
                     self.logger.info("Success")
                     torch.save(model.state_dict(), f'{self.args.saved_model_dir}{name}.pth')
+                    #!!! 保存参数文件
+                    args_file = f'{self.args.saved_model_dir}{name}.json'
+                    with open(args_file, 'w') as f:
+                        json.dump(vars(self.args), f, indent=4)
             else:
                 early_stop_cnt += 1
             if early_stop_cnt > 10:
