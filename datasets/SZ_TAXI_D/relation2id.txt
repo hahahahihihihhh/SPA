@@ -1,1 +1,2 @@
-weather	0
+adj	0
+weather	1

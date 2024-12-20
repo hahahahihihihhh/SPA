@@ -17,7 +17,7 @@ def main():
     # Commmon config
     parser.add_argument("--dataset", type=str, default="SZ_TAXI_D/")
     parser.add_argument("--random_seed", type=int, default=43)   # 22
-    parser.add_argument("--batch_size", type=int, default=5)    # 8
+    parser.add_argument("--batch_size", type=int, default=16)    # 8
     parser.add_argument("--max_epoch", type=int, default=200)    # 200
 
     # Optimizer config

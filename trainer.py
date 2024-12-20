@@ -144,6 +144,7 @@ class Trainer(object):
     def train_epoch(self, current_epoch, model, architect=None, lr=None, mode='NONE'):
         train_loss_list = []
         for batch_idx, train_timestamps in enumerate(self.train_loader):
+            print(batch_idx, train_timestamps)
             if mode == "spos_search":
                 train_loss = model(train_timestamps)
                 train_loss_list.append(train_loss.item())

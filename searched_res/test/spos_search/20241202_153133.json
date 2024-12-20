@@ -1,1 +1,0 @@
-[{"seed": 1, "dataset": "test/", "search_mode": "spos_search", "genotype": "rgat_vanilla||gru||lc_skip||rgat_vanilla||identity||lc_skip||rgcn||identity||lf_max"}]

@@ -38,7 +38,7 @@ class DynamicBaseModel(Module):
         g_batched_list, time_batched_list = self.get_batch_graph_list(timestamps, self.train_seq_len,
                                                                       self.dataset_graph, split="train")
         hist_embeddings, start_time_tensor, hist_embeddings_transformer, attn_mask = self.pre_forward(g_batched_list,
-                                                                                                      time_batched_list, val=True)
+                                                                                                      time_batched_list, val=True)     #!!! not val / val = False
         train_graphs, time_batched_list_t = g_batched_list[-1], time_batched_list[-1]
         prev_graph_embeds_list, time_diff_tensor, prev_graph_embeds_transformer_list, local_attn_mask = self.get_prev_embeddings(
             train_graphs,
@@ -49,7 +49,7 @@ class DynamicBaseModel(Module):
         _, per_graph_ent_embeds = self.get_per_graph_ent_embeds(train_graphs, time_batched_list_t, node_sizes,
                                                                    time_diff_tensor, prev_graph_embeds_list,
                                                                    prev_graph_embeds_transformer_list, local_attn_mask,
-                                                                   full=True)
+                                                                   full=True)   #!!! full = False
         i = 0
         for t, g, ent_embed in zip(time_batched_list_t, train_graphs, per_graph_ent_embeds):
             triplets, neg_tail_samples, neg_head_samples, labels = self.single_graph_negative_sampling(t, g,
