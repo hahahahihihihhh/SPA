@@ -1,6 +1,6 @@
 # python = 3.8
-dglteam::dgl-cuda11.1==0.9.1
 six==1.16.0
 hyperopt==0.2.7
 tensorboard==2.10.0
 sortedcontainers==2.4.0
+pandas==2.0.3

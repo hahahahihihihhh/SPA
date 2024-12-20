@@ -10,6 +10,12 @@
 This repository contains the code for [Search to Pass Messages for Temporal Knowledge Graph Completion](https://preview.aclanthology.org/emnlp-22-ingestion/2022.findings-emnlp.458/) in Findings of EMNLP 2022.
 
 ## Requirements
+```cmd
+conda create -n spa python=3.8
+pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
+conda install dglteam::dgl-cuda11.1
+pip -r requirements.txt
+```
 ```text
 python=3.8
 torch==1.9.0+cu111
