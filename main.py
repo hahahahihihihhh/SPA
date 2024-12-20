@@ -15,21 +15,21 @@ import torch
 def main():
     parser = argparse.ArgumentParser(description="Search to Pass Messages for Temporal Knowledge Completion")
     # Commmon config
-    parser.add_argument("--dataset", type=str, default="test/")
-    parser.add_argument("--random_seed", type=int, default=1)   # 22
-    parser.add_argument("--batch_size", type=int, default=2)    # 8
-    parser.add_argument("--max_epoch", type=int, default=10)    # 200
+    parser.add_argument("--dataset", type=str, default="SZ_TAXI_D/")
+    parser.add_argument("--random_seed", type=int, default=43)   # 22
+    parser.add_argument("--batch_size", type=int, default=5)    # 8
+    parser.add_argument("--max_epoch", type=int, default=200)    # 200
 
     # Optimizer config
     parser.add_argument("--optimizer", type=str, default="adam")
     parser.add_argument("--learning_rate", type=float, default=0.005)
     parser.add_argument("--momentum", type=float, default=0.9)
-    parser.add_argument("--weight_decay", type=float, default=10 ** -3.03830405163939) # 5e-4
+    parser.add_argument("--weight_decay", type=float, default=5e-4) # 5e-4
 
     # Running config
-    parser.add_argument("--train_mode", type=str, default="train",
+    parser.add_argument("--train_mode", type=str, default="search",
                         choices=["search", "tune", "train", "debug"])   # train
-    parser.add_argument("--search_mode", type=str, default="",
+    parser.add_argument("--search_mode", type=str, default="spos",
                         choices=["random", "spos", "spos_search"])  # ""
 
     # Structure config
@@ -44,22 +44,22 @@ def main():
     # base vector config
     parser.add_argument("--base_num", type=int, default=1)
     # RGAT config
-    parser.add_argument("--head_num", type=int, default=2)  # 4
+    parser.add_argument("--head_num", type=int, default=4)  # 4
     # CompGCN config
     parser.add_argument("--comp_op", type=str, default="corr")
     parser.add_argument("--sampled_dataset", type=bool, default=False)
 
     # Dynamic config
-    parser.add_argument("--train_seq_len", type=int, default=8)
-    parser.add_argument("--test_seq_len", type=int, default=8)
+    parser.add_argument("--train_seq_len", type=int, default=12) # 8
+    parser.add_argument("--test_seq_len", type=int, default=12)  # 8
     parser.add_argument("--rec_only_last_layer", type=bool, default=True)
     parser.add_argument("--use_time_embedding", type=bool, default=False)
-    parser.add_argument("--seq_head_num", type=int, default=2)  # 4
+    parser.add_argument("--seq_head_num", type=int, default=4)  # 4
 
     # search config
     parser.add_argument("--baseline_sample_num", type=int, default=30)
     parser.add_argument("--search_run_num", type=int, default=1)
-    parser.add_argument("--search_max_epoch", type=int, default=10) # 800
+    parser.add_argument("--search_max_epoch", type=int, default=800) # 800
     parser.add_argument("--min_learning_rate", type=float, default=0.001)
     parser.add_argument("--unrolled", action='store_true', default=False)
     parser.add_argument('--grad_clip', type=float, default=1)
@@ -68,11 +68,11 @@ def main():
     parser.add_argument("--arch_weight_decay", type=float, default=1e-3)
 
     # spos config
-    parser.add_argument("--arch_sample_num", type=int, default=12)  # 1000
+    parser.add_argument("--arch_sample_num", type=int, default=1000)  # 1000
     parser.add_argument("--stand_alone_path", type=str, default='')
 
     # fine-tune config
-    parser.add_argument("--tune_sample_num", type=int, default=2)   # 20
+    parser.add_argument("--tune_sample_num", type=int, default=20)   # 20
     parser.add_argument("--index", type=int, default=1)
     parser.add_argument("--negative_sampling_num", type=int, default=500)
     parser.add_argument("--isolated_change", type=bool, default=False)
@@ -81,14 +81,14 @@ def main():
     parser.add_argument("--log_dir", type=str, default="logs/")
     parser.add_argument("--time_log_dir", type=str, default="")
     parser.add_argument("--tensorboard_dir", type=str, default="tensorboard/")
-    parser.add_argument("--saved_model_dir", type=str, default="saved_models/")
-    parser.add_argument("--weight_path", type=str, default='weights/test/search/spos/SPASPOSSearch/20241202_150044_1/epoch_10.pt')  # ''
+    parser.add_argument("--saved_model_dir", type=str, default="saved_models/SZ_TAXI_D/")
+    parser.add_argument("--weight_path", type=str, default='weights/SZ_TAXI_S/search/spos/SPASPOSSearch/20241219_160051_43/epoch_800.pt')  # ''
     parser.add_argument("--fixed_ops", type=str, default='')
     parser.add_argument("--save_model", action="store_true")
     parser.add_argument("--search_res_dir", type=str, default="searched_res/")
     parser.add_argument("--tune_res_dir", type=str, default="tune_res/")
-    parser.add_argument("--search_res_file", type=str, default="searched_res/test/spos_search/20241202_153133.json")    # ''
-    parser.add_argument("--arch", type=str, default="rgat_vanilla||gru||lc_skip||rgat_vanilla||identity||lc_skip||rgcn||identity||lf_max".split('||'))  # ''
+    parser.add_argument("--search_res_file", type=str, default="searched_res/SZ_TAXI_S/spos_search/20241219_163351.json")    # ''
+    parser.add_argument("--arch", type=str, default="rgcn||sa||lc_skip||rgcn||gru||lc_skip||compgcn_rotate||gru||lf_concat".split('||'))  # ''
     parser.add_argument("--inv_temperature", type=float, default=0.1)
     args = parser.parse_args()
     dataset_info_dict = load_dataset(args.dataset_dir + args.dataset)

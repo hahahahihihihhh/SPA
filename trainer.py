@@ -21,7 +21,8 @@ EPOCH_TEST = {"icews14/": 30,
               "icews05-15/": 10,
               "gdelt/": 30,
               "wikidata11k/": 50,
-              "test/": 5}
+              "SZ_TAXI_S/": 5,
+              "SZ_TAXI_D/": 5}
 class Trainer(object):
     cnt_tune = 0
 
@@ -309,6 +310,9 @@ class Trainer(object):
             train_loss = self.train_epoch(epoch, model, mode="spos_train")
             valid_mrr, valid_loss = self.evaluate_epoch(epoch, model, split="valid", evaluate_ws=False,
                                                         mode="spos_train")
+            # if valid_mrr > best_val_mrr:
+            #     best_val_mrr = valid_mrr
+            #     torch.save(model.state_dict(), f'{weights_dir}epoch_{epoch}.pt')
             t_end = time.time()
             search_time += (t_end - t_start)
             writer.add_scalar('Loss/train', train_loss, epoch)

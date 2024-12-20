@@ -1,0 +1,5 @@
+Clear.	0
+Haze.	1
+Passing_clouds.	2
+Road	3
+Sunny.	4

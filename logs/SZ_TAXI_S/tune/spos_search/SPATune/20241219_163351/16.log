@@ -1,0 +1,126 @@
+2024-12-19 17:37:20,733 - [INFO] - Namespace(arch=['rgat_vanilla', 'gru', 'lc_skip', 'rgat_vanilla', 'identity', 'lc_skip', 'rgcn', 'identity', 'lf_max'], arch_learning_rate=0.01, arch_sample_num=1000, arch_weight_decay=0.001, base_num=1, baseline_sample_num=30, batch_size=1, comp_op='corr', dataset='SZ_TAXI_S/', dataset_dir='datasets/', dropout=0.1, embed_size=128, encoder='SPATune', fixed_ops='', genotype='rgcn||sa||lc_skip||rgcn||gru||lc_skip||compgcn_rotate||gru||lf_concat', gnn_layer_num=3, grad_clip=1, head_num=4, hidden_size=128, index=16, inv_temperature=0.1, isolated_change=False, learning_rate=0.005, log_dir='logs/', max_epoch=200, min_arch_learning_rate=0.0005, min_learning_rate=0.001, momentum=0.9, negative_sampling_num=500, optimizer='adam', positive_fact_num=3000, random_seed=43, rec_only_last_layer=True, rnn_layer_num=1, sampled_dataset=False, save_model=False, saved_model_dir='saved_models/', score_function='complex', search_max_epoch=800, search_mode='spos_search', search_res_dir='searched_res/', search_res_file='searched_res/SZ_TAXI_S/spos_search/20241219_163351.json', search_run_num=1, seq_head_num=2, stand_alone_path='', tensorboard_dir='tensorboard/', test_seq_len=8, time_log_dir='', train_mode='tune', train_seq_len=8, tune_res_dir='tune_res/', tune_sample_num=20, unrolled=False, use_time_embedding=False, weight_decay=2.0470538552325574e-05, weight_path='weights/SZ_TAXI_S/search/spos/SPASPOSSearch/20241219_160051_43/epoch_800.pt')
+2024-12-19 17:37:20,749 - [INFO] - Parameter size = 0.420884MB
+2024-12-19 17:37:20,959 - [INFO] - [Epoch:1 | Tune]: Train Loss:12.44
+2024-12-19 17:37:21,024 - [INFO] - [Epoch:1 | Valid]: Loss:12.43, MRR:0.0361, Hits@10:0.05, Hits@3:0.0214, Hits@1:0.00714
+2024-12-19 17:37:21,230 - [INFO] - [Epoch:2 | Tune]: Train Loss:12.14
+2024-12-19 17:37:21,293 - [INFO] - [Epoch:2 | Valid]: Loss:12.43, MRR:0.0411, Hits@10:0.0786, Hits@3:0.0357, Hits@1:0.00714
+2024-12-19 17:37:21,500 - [INFO] - [Epoch:3 | Tune]: Train Loss:11.56
+2024-12-19 17:37:21,563 - [INFO] - [Epoch:3 | Valid]: Loss:12.42, MRR:0.0513, Hits@10:0.114, Hits@3:0.0357, Hits@1:0.0143
+2024-12-19 17:37:21,768 - [INFO] - [Epoch:4 | Tune]: Train Loss:10.46
+2024-12-19 17:37:21,832 - [INFO] - [Epoch:4 | Valid]: Loss:12.36, MRR:0.0653, Hits@10:0.121, Hits@3:0.0571, Hits@1:0.0143
+2024-12-19 17:37:22,037 - [INFO] - [Epoch:5 | Tune]: Train Loss:8.752
+2024-12-19 17:37:22,102 - [INFO] - [Epoch:5 | Valid]: Loss:12.21, MRR:0.0814, Hits@10:0.143, Hits@3:0.0786, Hits@1:0.0214
+2024-12-19 17:37:22,307 - [INFO] - [Epoch:6 | Tune]: Train Loss:7.274
+2024-12-19 17:37:22,372 - [INFO] - [Epoch:6 | Valid]: Loss:12.06, MRR:0.0915, Hits@10:0.207, Hits@3:0.0857, Hits@1:0.0214
+2024-12-19 17:37:22,419 - [INFO] - [Epoch:6 | Test]: Loss:0.0, MRR:0.0915, Hits@10:0.207, Hits@3:0.0857, Hits@1:0.0214
+2024-12-19 17:37:22,419 - [INFO] - Success
+2024-12-19 17:37:22,629 - [INFO] - [Epoch:7 | Tune]: Train Loss:5.959
+2024-12-19 17:37:22,693 - [INFO] - [Epoch:7 | Valid]: Loss:11.97, MRR:0.108, Hits@10:0.214, Hits@3:0.114, Hits@1:0.0357
+2024-12-19 17:37:22,738 - [INFO] - [Epoch:7 | Test]: Loss:0.0, MRR:0.108, Hits@10:0.214, Hits@3:0.114, Hits@1:0.0357
+2024-12-19 17:37:22,739 - [INFO] - Success
+2024-12-19 17:37:22,947 - [INFO] - [Epoch:8 | Tune]: Train Loss:4.686
+2024-12-19 17:37:23,010 - [INFO] - [Epoch:8 | Valid]: Loss:11.87, MRR:0.114, Hits@10:0.293, Hits@3:0.129, Hits@1:0.0286
+2024-12-19 17:37:23,055 - [INFO] - [Epoch:8 | Test]: Loss:0.0, MRR:0.114, Hits@10:0.293, Hits@3:0.129, Hits@1:0.0286
+2024-12-19 17:37:23,055 - [INFO] - Success
+2024-12-19 17:37:23,265 - [INFO] - [Epoch:9 | Tune]: Train Loss:3.398
+2024-12-19 17:37:23,328 - [INFO] - [Epoch:9 | Valid]: Loss:11.73, MRR:0.138, Hits@10:0.286, Hits@3:0.136, Hits@1:0.0571
+2024-12-19 17:37:23,375 - [INFO] - [Epoch:9 | Test]: Loss:0.0, MRR:0.138, Hits@10:0.286, Hits@3:0.136, Hits@1:0.0571
+2024-12-19 17:37:23,375 - [INFO] - Success
+2024-12-19 17:37:23,584 - [INFO] - [Epoch:10 | Tune]: Train Loss:2.664
+2024-12-19 17:37:23,648 - [INFO] - [Epoch:10 | Valid]: Loss:11.51, MRR:0.177, Hits@10:0.336, Hits@3:0.179, Hits@1:0.1
+2024-12-19 17:37:23,694 - [INFO] - [Epoch:10 | Test]: Loss:0.0, MRR:0.177, Hits@10:0.336, Hits@3:0.179, Hits@1:0.1
+2024-12-19 17:37:23,695 - [INFO] - Success
+2024-12-19 17:37:23,902 - [INFO] - [Epoch:11 | Tune]: Train Loss:1.875
+2024-12-19 17:37:23,966 - [INFO] - [Epoch:11 | Valid]: Loss:11.32, MRR:0.196, Hits@10:0.364, Hits@3:0.221, Hits@1:0.107
+2024-12-19 17:37:24,012 - [INFO] - [Epoch:11 | Test]: Loss:0.0, MRR:0.196, Hits@10:0.364, Hits@3:0.221, Hits@1:0.107
+2024-12-19 17:37:24,012 - [INFO] - Success
+2024-12-19 17:37:24,220 - [INFO] - [Epoch:12 | Tune]: Train Loss:1.336
+2024-12-19 17:37:24,285 - [INFO] - [Epoch:12 | Valid]: Loss:11.19, MRR:0.242, Hits@10:0.407, Hits@3:0.264, Hits@1:0.143
+2024-12-19 17:37:24,330 - [INFO] - [Epoch:12 | Test]: Loss:0.0, MRR:0.242, Hits@10:0.407, Hits@3:0.264, Hits@1:0.143
+2024-12-19 17:37:24,331 - [INFO] - Success
+2024-12-19 17:37:24,539 - [INFO] - [Epoch:13 | Tune]: Train Loss:0.8235
+2024-12-19 17:37:24,603 - [INFO] - [Epoch:13 | Valid]: Loss:11.34, MRR:0.264, Hits@10:0.457, Hits@3:0.307, Hits@1:0.143
+2024-12-19 17:37:24,649 - [INFO] - [Epoch:13 | Test]: Loss:0.0, MRR:0.264, Hits@10:0.457, Hits@3:0.307, Hits@1:0.143
+2024-12-19 17:37:24,649 - [INFO] - Success
+2024-12-19 17:37:24,857 - [INFO] - [Epoch:14 | Tune]: Train Loss:0.7693
+2024-12-19 17:37:24,922 - [INFO] - [Epoch:14 | Valid]: Loss:11.77, MRR:0.283, Hits@10:0.521, Hits@3:0.329, Hits@1:0.157
+2024-12-19 17:37:24,968 - [INFO] - [Epoch:14 | Test]: Loss:0.0, MRR:0.283, Hits@10:0.521, Hits@3:0.329, Hits@1:0.157
+2024-12-19 17:37:24,968 - [INFO] - Success
+2024-12-19 17:37:25,177 - [INFO] - [Epoch:15 | Tune]: Train Loss:0.4946
+2024-12-19 17:37:25,239 - [INFO] - [Epoch:15 | Valid]: Loss:12.59, MRR:0.277, Hits@10:0.543, Hits@3:0.343, Hits@1:0.136
+2024-12-19 17:37:25,447 - [INFO] - [Epoch:16 | Tune]: Train Loss:0.3013
+2024-12-19 17:37:25,511 - [INFO] - [Epoch:16 | Valid]: Loss:13.59, MRR:0.279, Hits@10:0.607, Hits@3:0.35, Hits@1:0.121
+2024-12-19 17:37:25,717 - [INFO] - [Epoch:17 | Tune]: Train Loss:0.3979
+2024-12-19 17:37:25,781 - [INFO] - [Epoch:17 | Valid]: Loss:14.53, MRR:0.308, Hits@10:0.636, Hits@3:0.386, Hits@1:0.143
+2024-12-19 17:37:25,827 - [INFO] - [Epoch:17 | Test]: Loss:0.0, MRR:0.308, Hits@10:0.636, Hits@3:0.386, Hits@1:0.143
+2024-12-19 17:37:25,827 - [INFO] - Success
+2024-12-19 17:37:26,036 - [INFO] - [Epoch:18 | Tune]: Train Loss:0.2925
+2024-12-19 17:37:26,101 - [INFO] - [Epoch:18 | Valid]: Loss:16.03, MRR:0.355, Hits@10:0.657, Hits@3:0.443, Hits@1:0.207
+2024-12-19 17:37:26,147 - [INFO] - [Epoch:18 | Test]: Loss:0.0, MRR:0.355, Hits@10:0.657, Hits@3:0.443, Hits@1:0.207
+2024-12-19 17:37:26,147 - [INFO] - Success
+2024-12-19 17:37:26,354 - [INFO] - [Epoch:19 | Tune]: Train Loss:0.1546
+2024-12-19 17:37:26,418 - [INFO] - [Epoch:19 | Valid]: Loss:17.1, MRR:0.376, Hits@10:0.686, Hits@3:0.457, Hits@1:0.221
+2024-12-19 17:37:26,465 - [INFO] - [Epoch:19 | Test]: Loss:0.0, MRR:0.376, Hits@10:0.686, Hits@3:0.457, Hits@1:0.221
+2024-12-19 17:37:26,466 - [INFO] - Success
+2024-12-19 17:37:26,675 - [INFO] - [Epoch:20 | Tune]: Train Loss:0.2222
+2024-12-19 17:37:26,738 - [INFO] - [Epoch:20 | Valid]: Loss:19.17, MRR:0.382, Hits@10:0.664, Hits@3:0.464, Hits@1:0.229
+2024-12-19 17:37:26,783 - [INFO] - [Epoch:20 | Test]: Loss:0.0, MRR:0.382, Hits@10:0.664, Hits@3:0.464, Hits@1:0.229
+2024-12-19 17:37:26,784 - [INFO] - Success
+2024-12-19 17:37:26,992 - [INFO] - [Epoch:21 | Tune]: Train Loss:0.23
+2024-12-19 17:37:27,056 - [INFO] - [Epoch:21 | Valid]: Loss:21.34, MRR:0.383, Hits@10:0.65, Hits@3:0.457, Hits@1:0.243
+2024-12-19 17:37:27,102 - [INFO] - [Epoch:21 | Test]: Loss:0.0, MRR:0.383, Hits@10:0.65, Hits@3:0.457, Hits@1:0.243
+2024-12-19 17:37:27,102 - [INFO] - Success
+2024-12-19 17:37:27,311 - [INFO] - [Epoch:22 | Tune]: Train Loss:0.1322
+2024-12-19 17:37:27,376 - [INFO] - [Epoch:22 | Valid]: Loss:23.61, MRR:0.377, Hits@10:0.643, Hits@3:0.436, Hits@1:0.243
+2024-12-19 17:37:27,584 - [INFO] - [Epoch:23 | Tune]: Train Loss:0.1921
+2024-12-19 17:37:27,647 - [INFO] - [Epoch:23 | Valid]: Loss:25.82, MRR:0.364, Hits@10:0.65, Hits@3:0.45, Hits@1:0.214
+2024-12-19 17:37:27,854 - [INFO] - [Epoch:24 | Tune]: Train Loss:0.1694
+2024-12-19 17:37:27,918 - [INFO] - [Epoch:24 | Valid]: Loss:28.06, MRR:0.348, Hits@10:0.657, Hits@3:0.421, Hits@1:0.207
+2024-12-19 17:37:28,123 - [INFO] - [Epoch:25 | Tune]: Train Loss:0.1166
+2024-12-19 17:37:28,188 - [INFO] - [Epoch:25 | Valid]: Loss:30.63, MRR:0.342, Hits@10:0.65, Hits@3:0.4, Hits@1:0.214
+2024-12-19 17:37:28,393 - [INFO] - [Epoch:26 | Tune]: Train Loss:0.07348
+2024-12-19 17:37:28,457 - [INFO] - [Epoch:26 | Valid]: Loss:32.97, MRR:0.305, Hits@10:0.643, Hits@3:0.357, Hits@1:0.164
+2024-12-19 17:37:28,667 - [INFO] - [Epoch:27 | Tune]: Train Loss:0.1799
+2024-12-19 17:37:28,730 - [INFO] - [Epoch:27 | Valid]: Loss:35.27, MRR:0.266, Hits@10:0.636, Hits@3:0.321, Hits@1:0.114
+2024-12-19 17:37:28,936 - [INFO] - [Epoch:28 | Tune]: Train Loss:0.1403
+2024-12-19 17:37:29,001 - [INFO] - [Epoch:28 | Valid]: Loss:38.08, MRR:0.288, Hits@10:0.614, Hits@3:0.307, Hits@1:0.157
+2024-12-19 17:37:29,209 - [INFO] - [Epoch:29 | Tune]: Train Loss:0.09487
+2024-12-19 17:37:29,283 - [INFO] - [Epoch:29 | Valid]: Loss:40.47, MRR:0.238, Hits@10:0.614, Hits@3:0.257, Hits@1:0.0929
+2024-12-19 17:37:29,490 - [INFO] - [Epoch:30 | Tune]: Train Loss:0.1034
+2024-12-19 17:37:29,555 - [INFO] - [Epoch:30 | Valid]: Loss:42.72, MRR:0.206, Hits@10:0.614, Hits@3:0.214, Hits@1:0.0643
+2024-12-19 17:37:29,761 - [INFO] - [Epoch:31 | Tune]: Train Loss:0.113
+2024-12-19 17:37:29,824 - [INFO] - [Epoch:31 | Valid]: Loss:45.78, MRR:0.183, Hits@10:0.579, Hits@3:0.179, Hits@1:0.05
+2024-12-19 17:37:30,031 - [INFO] - [Epoch:32 | Tune]: Train Loss:0.1023
+2024-12-19 17:37:30,094 - [INFO] - [Epoch:32 | Valid]: Loss:47.85, MRR:0.211, Hits@10:0.543, Hits@3:0.229, Hits@1:0.0786
+2024-12-19 17:37:30,306 - [INFO] - [Epoch:33 | Tune]: Train Loss:0.08455
+2024-12-19 17:37:30,369 - [INFO] - [Epoch:33 | Valid]: Loss:49.55, MRR:0.189, Hits@10:0.529, Hits@3:0.179, Hits@1:0.0714
+2024-12-19 17:37:30,577 - [INFO] - [Epoch:34 | Tune]: Train Loss:0.07938
+2024-12-19 17:37:30,641 - [INFO] - [Epoch:34 | Valid]: Loss:51.36, MRR:0.154, Hits@10:0.514, Hits@3:0.121, Hits@1:0.0286
+2024-12-19 17:37:30,845 - [INFO] - [Epoch:35 | Tune]: Train Loss:0.09973
+2024-12-19 17:37:30,908 - [INFO] - [Epoch:35 | Valid]: Loss:52.21, MRR:0.164, Hits@10:0.5, Hits@3:0.136, Hits@1:0.0429
+2024-12-19 17:37:31,115 - [INFO] - [Epoch:36 | Tune]: Train Loss:0.09939
+2024-12-19 17:37:31,179 - [INFO] - [Epoch:36 | Valid]: Loss:53.44, MRR:0.168, Hits@10:0.486, Hits@3:0.136, Hits@1:0.0571
+2024-12-19 17:37:31,383 - [INFO] - [Epoch:37 | Tune]: Train Loss:0.04648
+2024-12-19 17:37:31,447 - [INFO] - [Epoch:37 | Valid]: Loss:54.89, MRR:0.165, Hits@10:0.479, Hits@3:0.129, Hits@1:0.05
+2024-12-19 17:37:31,652 - [INFO] - [Epoch:38 | Tune]: Train Loss:0.02578
+2024-12-19 17:37:31,716 - [INFO] - [Epoch:38 | Valid]: Loss:56.06, MRR:0.18, Hits@10:0.486, Hits@3:0.164, Hits@1:0.0571
+2024-12-19 17:37:31,921 - [INFO] - [Epoch:39 | Tune]: Train Loss:0.03658
+2024-12-19 17:37:31,986 - [INFO] - [Epoch:39 | Valid]: Loss:56.64, MRR:0.169, Hits@10:0.486, Hits@3:0.15, Hits@1:0.0429
+2024-12-19 17:37:32,192 - [INFO] - [Epoch:40 | Tune]: Train Loss:0.03802
+2024-12-19 17:37:32,256 - [INFO] - [Epoch:40 | Valid]: Loss:57.09, MRR:0.166, Hits@10:0.457, Hits@3:0.143, Hits@1:0.0571
+2024-12-19 17:37:32,461 - [INFO] - [Epoch:41 | Tune]: Train Loss:0.01039
+2024-12-19 17:37:32,526 - [INFO] - [Epoch:41 | Valid]: Loss:58.73, MRR:0.161, Hits@10:0.471, Hits@3:0.129, Hits@1:0.05
+2024-12-19 17:37:32,733 - [INFO] - [Epoch:42 | Tune]: Train Loss:0.02542
+2024-12-19 17:37:32,796 - [INFO] - [Epoch:42 | Valid]: Loss:59.15, MRR:0.155, Hits@10:0.471, Hits@3:0.121, Hits@1:0.0429
+2024-12-19 17:37:33,000 - [INFO] - [Epoch:43 | Tune]: Train Loss:0.00586
+2024-12-19 17:37:33,064 - [INFO] - [Epoch:43 | Valid]: Loss:60.48, MRR:0.142, Hits@10:0.464, Hits@3:0.107, Hits@1:0.0286
+2024-12-19 17:37:33,270 - [INFO] - [Epoch:44 | Tune]: Train Loss:0.02444
+2024-12-19 17:37:33,332 - [INFO] - [Epoch:44 | Valid]: Loss:59.99, MRR:0.135, Hits@10:0.464, Hits@3:0.0857, Hits@1:0.0286
+2024-12-19 17:37:33,538 - [INFO] - [Epoch:45 | Tune]: Train Loss:0.002174
+2024-12-19 17:37:33,601 - [INFO] - [Epoch:45 | Valid]: Loss:61.93, MRR:0.139, Hits@10:0.45, Hits@3:0.0929, Hits@1:0.0357
+2024-12-19 17:37:33,807 - [INFO] - [Epoch:46 | Tune]: Train Loss:0.002471
+2024-12-19 17:37:33,870 - [INFO] - [Epoch:46 | Valid]: Loss:61.78, MRR:0.136, Hits@10:0.443, Hits@3:0.0857, Hits@1:0.0357
+2024-12-19 17:37:34,075 - [INFO] - [Epoch:47 | Tune]: Train Loss:0.02567
+2024-12-19 17:37:34,139 - [INFO] - [Epoch:47 | Valid]: Loss:62.78, MRR:0.132, Hits@10:0.436, Hits@3:0.0857, Hits@1:0.0286
+2024-12-19 17:37:34,139 - [INFO] - Early stop!
+2024-12-19 17:37:34,140 - [INFO] - 0.38262447714805603 rgcn||sa||lc_skip||rgcn||gru||lc_skip||compgcn_rotate||gru||lf_concat

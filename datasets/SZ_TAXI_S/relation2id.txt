@@ -1,0 +1,10 @@
+accommodations	0
+adj	1
+catering_services	2
+education_services	3
+enterprises	4
+living_services	5
+medical_services	6
+others	7
+shopping_services	8
+transportation_facilities	9
