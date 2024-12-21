@@ -1,0 +1,403 @@
+2024-12-21 01:03:30,788 - [INFO] - Log file is saved in logs/SZ_TAXI_D/search/spos/SPASPOSSearch/20241220_151257_43/epoch_200/
+2024-12-21 01:03:35,134 - [INFO] - Finish loading checkpoint from weights/SZ_TAXI_D/search/spos/SPASPOSSearch/20241220_151257_43/epoch_200.pt
+2024-12-21 01:04:02,912 - [INFO] - [Epoch:1 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:04:02,912 - [INFO] - [Epoch:1 | 200]: Path:rgcn||gru||lc_sum||rgat_vanilla||sa||lc_skip||rgat_vanilla||sa||lf_mean
+2024-12-21 01:04:29,539 - [INFO] - [Epoch:2 | Valid]: Loss:1.452e+06, MRR:0.711, Hits@10:0.968, Hits@3:0.817, Hits@1:0.549
+2024-12-21 01:04:29,539 - [INFO] - [Epoch:2 | 200]: Path:rgcn||identity||lc_skip||rgat_vanilla||gru||lc_skip||compgcn_rotate||sa||lf_concat
+2024-12-21 01:04:49,775 - [INFO] - [Epoch:3 | Valid]: Loss:13.84, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 01:04:49,775 - [INFO] - [Epoch:3 | 200]: Path:compgcn_rotate||gru||lc_skip||compgcn_rotate||identity||lc_skip||rgat_vanilla||gru||lf_mean
+2024-12-21 01:05:09,852 - [INFO] - [Epoch:4 | Valid]: Loss:0.0, MRR:0.709, Hits@10:0.968, Hits@3:0.817, Hits@1:0.564
+2024-12-21 01:05:09,852 - [INFO] - [Epoch:4 | 200]: Path:rgcn||sa||lc_sum||compgcn_rotate||identity||lc_concat||rgat_vanilla||gru||lf_concat
+2024-12-21 01:05:34,333 - [INFO] - [Epoch:5 | Valid]: Loss:0.0127, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:05:34,333 - [INFO] - [Epoch:5 | 200]: Path:rgat_vanilla||gru||lc_skip||compgcn_rotate||identity||lc_skip||compgcn_rotate||identity||lf_max
+2024-12-21 01:05:58,383 - [INFO] - [Epoch:6 | Valid]: Loss:25.27, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 01:05:58,383 - [INFO] - [Epoch:6 | 200]: Path:rgat_vanilla||identity||lc_skip||rgcn||identity||lc_concat||compgcn_rotate||identity||lf_mean
+2024-12-21 01:06:17,738 - [INFO] - [Epoch:7 | Valid]: Loss:7.099e+05, MRR:0.714, Hits@10:0.997, Hits@3:0.818, Hits@1:0.564
+2024-12-21 01:06:17,739 - [INFO] - [Epoch:7 | 200]: Path:rgcn||gru||lc_sum||compgcn_rotate||gru||lc_skip||rgcn||sa||lf_concat
+2024-12-21 01:06:37,380 - [INFO] - [Epoch:8 | Valid]: Loss:0.05005, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 01:06:37,381 - [INFO] - [Epoch:8 | 200]: Path:compgcn_rotate||sa||lc_skip||compgcn_rotate||identity||lc_concat||compgcn_rotate||identity||lf_skip
+2024-12-21 01:07:03,260 - [INFO] - [Epoch:9 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:07:03,260 - [INFO] - [Epoch:9 | 200]: Path:rgat_vanilla||gru||lc_sum||rgcn||sa||lc_skip||rgcn||gru||lf_max
+2024-12-21 01:07:24,207 - [INFO] - [Epoch:10 | Valid]: Loss:0.0, MRR:0.805, Hits@10:1.0, Hits@3:1.0, Hits@1:0.643
+2024-12-21 01:07:24,207 - [INFO] - [Epoch:10 | 200]: Path:compgcn_rotate||gru||lc_concat||compgcn_rotate||sa||lc_skip||rgat_vanilla||sa||lf_concat
+2024-12-21 01:07:49,381 - [INFO] - [Epoch:11 | Valid]: Loss:150.4, MRR:0.815, Hits@10:0.952, Hits@3:0.922, Hits@1:0.723
+2024-12-21 01:07:49,381 - [INFO] - [Epoch:11 | 200]: Path:rgat_vanilla||sa||lc_skip||compgcn_rotate||gru||lc_concat||rgat_vanilla||identity||lf_skip
+2024-12-21 01:08:09,249 - [INFO] - [Epoch:12 | Valid]: Loss:1.56e+05, MRR:0.741, Hits@10:0.938, Hits@3:0.779, Hits@1:0.643
+2024-12-21 01:08:09,250 - [INFO] - [Epoch:12 | 200]: Path:rgcn||sa||lc_sum||compgcn_rotate||gru||lc_concat||rgcn||sa||lf_concat
+2024-12-21 01:08:29,907 - [INFO] - [Epoch:13 | Valid]: Loss:0.06509, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 01:08:29,907 - [INFO] - [Epoch:13 | 200]: Path:compgcn_rotate||sa||lc_sum||compgcn_rotate||identity||lc_sum||compgcn_rotate||identity||lf_mean
+2024-12-21 01:08:56,292 - [INFO] - [Epoch:14 | Valid]: Loss:36.95, MRR:0.975, Hits@10:0.995, Hits@3:0.995, Hits@1:0.956
+2024-12-21 01:08:56,292 - [INFO] - [Epoch:14 | 200]: Path:rgat_vanilla||gru||lc_skip||rgcn||sa||lc_concat||rgat_vanilla||sa||lf_skip
+2024-12-21 01:09:16,935 - [INFO] - [Epoch:15 | Valid]: Loss:2.566, MRR:0.998, Hits@10:0.999, Hits@3:0.998, Hits@1:0.997
+2024-12-21 01:09:16,935 - [INFO] - [Epoch:15 | 200]: Path:compgcn_rotate||sa||lc_skip||compgcn_rotate||identity||lc_concat||rgat_vanilla||sa||lf_mean
+2024-12-21 01:09:36,466 - [INFO] - [Epoch:16 | Valid]: Loss:133.9, MRR:0.999, Hits@10:1.0, Hits@3:1.0, Hits@1:0.997
+2024-12-21 01:09:36,467 - [INFO] - [Epoch:16 | 200]: Path:compgcn_rotate||identity||lc_sum||compgcn_rotate||identity||lc_skip||compgcn_rotate||identity||lf_skip
+2024-12-21 01:09:55,779 - [INFO] - [Epoch:17 | Valid]: Loss:0.0, MRR:0.834, Hits@10:1.0, Hits@3:0.928, Hits@1:0.763
+2024-12-21 01:09:55,779 - [INFO] - [Epoch:17 | 200]: Path:rgcn||identity||lc_concat||rgcn||gru||lc_concat||rgcn||sa||lf_mean
+2024-12-21 01:10:28,770 - [INFO] - [Epoch:18 | Valid]: Loss:0.0, MRR:0.853, Hits@10:1.0, Hits@3:1.0, Hits@1:0.706
+2024-12-21 01:10:28,770 - [INFO] - [Epoch:18 | 200]: Path:rgat_vanilla||identity||lc_sum||rgat_vanilla||identity||lc_sum||rgcn||identity||lf_concat
+2024-12-21 01:10:59,709 - [INFO] - [Epoch:19 | Valid]: Loss:9.644e+03, MRR:0.938, Hits@10:0.945, Hits@3:0.941, Hits@1:0.927
+2024-12-21 01:10:59,710 - [INFO] - [Epoch:19 | 200]: Path:compgcn_rotate||sa||lc_concat||rgcn||sa||lc_concat||rgcn||identity||lf_skip
+2024-12-21 01:11:44,008 - [INFO] - [Epoch:20 | Valid]: Loss:0.0, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 01:11:44,008 - [INFO] - [Epoch:20 | 200]: Path:rgat_vanilla||sa||lc_sum||rgat_vanilla||sa||lc_concat||rgcn||identity||lf_mean
+2024-12-21 01:12:16,550 - [INFO] - [Epoch:21 | Valid]: Loss:0.0, MRR:0.732, Hits@10:1.0, Hits@3:0.905, Hits@1:0.556
+2024-12-21 01:12:16,551 - [INFO] - [Epoch:21 | 200]: Path:compgcn_rotate||sa||lc_sum||rgcn||sa||lc_skip||rgat_vanilla||sa||lf_concat
+2024-12-21 01:12:54,921 - [INFO] - [Epoch:22 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:12:54,921 - [INFO] - [Epoch:22 | 200]: Path:rgat_vanilla||sa||lc_sum||rgcn||identity||lc_skip||rgat_vanilla||gru||lf_max
+2024-12-21 01:13:27,155 - [INFO] - [Epoch:23 | Valid]: Loss:0.0, MRR:0.721, Hits@10:1.0, Hits@3:0.815, Hits@1:0.564
+2024-12-21 01:13:27,156 - [INFO] - [Epoch:23 | 200]: Path:compgcn_rotate||sa||lc_skip||compgcn_rotate||gru||lc_concat||rgcn||identity||lf_concat
+2024-12-21 01:14:07,262 - [INFO] - [Epoch:24 | Valid]: Loss:0.0, MRR:0.982, Hits@10:1.0, Hits@3:1.0, Hits@1:0.963
+2024-12-21 01:14:07,262 - [INFO] - [Epoch:24 | 200]: Path:rgcn||gru||lc_concat||rgat_vanilla||sa||lc_sum||rgat_vanilla||identity||lf_max
+2024-12-21 01:14:46,317 - [INFO] - [Epoch:25 | Valid]: Loss:499.2, MRR:0.528, Hits@10:0.522, Hits@3:0.515, Hits@1:0.483
+2024-12-21 01:14:46,317 - [INFO] - [Epoch:25 | 200]: Path:rgcn||gru||lc_sum||rgat_vanilla||identity||lc_sum||rgat_vanilla||sa||lf_skip
+2024-12-21 01:15:31,037 - [INFO] - [Epoch:26 | Valid]: Loss:0.0, MRR:0.721, Hits@10:1.0, Hits@3:0.815, Hits@1:0.554
+2024-12-21 01:15:31,037 - [INFO] - [Epoch:26 | 200]: Path:rgat_vanilla||gru||lc_sum||rgat_vanilla||identity||lc_skip||compgcn_rotate||identity||lf_concat
+2024-12-21 01:16:16,701 - [INFO] - [Epoch:27 | Valid]: Loss:0.0, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 01:16:16,701 - [INFO] - [Epoch:27 | 200]: Path:rgat_vanilla||gru||lc_concat||rgat_vanilla||gru||lc_sum||compgcn_rotate||sa||lf_mean
+2024-12-21 01:16:55,078 - [INFO] - [Epoch:28 | Valid]: Loss:198.5, MRR:0.791, Hits@10:0.904, Hits@3:0.832, Hits@1:0.721
+2024-12-21 01:16:55,078 - [INFO] - [Epoch:28 | 200]: Path:rgcn||sa||lc_skip||rgat_vanilla||sa||lc_sum||rgat_vanilla||gru||lf_skip
+2024-12-21 01:17:33,406 - [INFO] - [Epoch:29 | Valid]: Loss:115.9, MRR:0.848, Hits@10:0.992, Hits@3:0.978, Hits@1:0.738
+2024-12-21 01:17:33,407 - [INFO] - [Epoch:29 | 200]: Path:rgcn||identity||lc_sum||compgcn_rotate||sa||lc_sum||rgat_vanilla||gru||lf_max
+2024-12-21 01:18:10,778 - [INFO] - [Epoch:30 | Valid]: Loss:0.006542, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:18:10,778 - [INFO] - [Epoch:30 | 200]: Path:rgcn||gru||lc_concat||compgcn_rotate||gru||lc_concat||compgcn_rotate||identity||lf_max
+2024-12-21 01:18:55,770 - [INFO] - [Epoch:31 | Valid]: Loss:0.0, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 01:18:55,770 - [INFO] - [Epoch:31 | 200]: Path:rgcn||gru||lc_concat||rgat_vanilla||gru||lc_sum||compgcn_rotate||sa||lf_skip
+2024-12-21 01:19:41,080 - [INFO] - [Epoch:32 | Valid]: Loss:0.0003636, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:19:41,080 - [INFO] - [Epoch:32 | 200]: Path:rgcn||identity||lc_sum||rgat_vanilla||gru||lc_sum||rgcn||gru||lf_max
+2024-12-21 01:20:16,142 - [INFO] - [Epoch:33 | Valid]: Loss:3.204e+03, MRR:0.844, Hits@10:0.998, Hits@3:0.994, Hits@1:0.76
+2024-12-21 01:20:16,142 - [INFO] - [Epoch:33 | 200]: Path:compgcn_rotate||sa||lc_concat||rgcn||sa||lc_concat||rgcn||sa||lf_skip
+2024-12-21 01:21:00,575 - [INFO] - [Epoch:34 | Valid]: Loss:0.0, MRR:0.813, Hits@10:1.0, Hits@3:0.815, Hits@1:0.747
+2024-12-21 01:21:00,575 - [INFO] - [Epoch:34 | 200]: Path:rgat_vanilla||sa||lc_skip||compgcn_rotate||identity||lc_concat||rgat_vanilla||sa||lf_concat
+2024-12-21 01:21:43,773 - [INFO] - [Epoch:35 | Valid]: Loss:0.0, MRR:0.571, Hits@10:1.0, Hits@3:0.815, Hits@1:0.332
+2024-12-21 01:21:43,773 - [INFO] - [Epoch:35 | 200]: Path:rgat_vanilla||gru||lc_sum||compgcn_rotate||gru||lc_concat||compgcn_rotate||identity||lf_concat
+2024-12-21 01:22:34,908 - [INFO] - [Epoch:36 | Valid]: Loss:0.0, MRR:0.883, Hits@10:1.0, Hits@3:0.997, Hits@1:0.783
+2024-12-21 01:22:34,908 - [INFO] - [Epoch:36 | 200]: Path:rgat_vanilla||gru||lc_sum||rgat_vanilla||identity||lc_concat||compgcn_rotate||sa||lf_concat
+2024-12-21 01:23:26,151 - [INFO] - [Epoch:37 | Valid]: Loss:0.0, MRR:0.843, Hits@10:1.0, Hits@3:0.951, Hits@1:0.727
+2024-12-21 01:23:26,151 - [INFO] - [Epoch:37 | 200]: Path:rgat_vanilla||gru||lc_sum||rgat_vanilla||sa||lc_concat||rgcn||gru||lf_concat
+2024-12-21 01:24:17,478 - [INFO] - [Epoch:38 | Valid]: Loss:0.0, MRR:0.748, Hits@10:1.0, Hits@3:0.836, Hits@1:0.593
+2024-12-21 01:24:17,479 - [INFO] - [Epoch:38 | 200]: Path:rgat_vanilla||sa||lc_skip||rgat_vanilla||sa||lc_concat||compgcn_rotate||gru||lf_concat
+2024-12-21 01:24:52,234 - [INFO] - [Epoch:39 | Valid]: Loss:2.314e+05, MRR:0.805, Hits@10:1.0, Hits@3:0.869, Hits@1:0.719
+2024-12-21 01:24:52,234 - [INFO] - [Epoch:39 | 200]: Path:rgcn||sa||lc_sum||compgcn_rotate||sa||lc_sum||compgcn_rotate||gru||lf_concat
+2024-12-21 01:25:35,527 - [INFO] - [Epoch:40 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:25:35,527 - [INFO] - [Epoch:40 | 200]: Path:rgat_vanilla||gru||lc_concat||compgcn_rotate||sa||lc_concat||compgcn_rotate||sa||lf_max
+2024-12-21 01:26:17,944 - [INFO] - [Epoch:41 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:26:17,944 - [INFO] - [Epoch:41 | 200]: Path:rgcn||sa||lc_concat||rgat_vanilla||identity||lc_skip||compgcn_rotate||sa||lf_max
+2024-12-21 01:27:02,393 - [INFO] - [Epoch:42 | Valid]: Loss:0.0, MRR:0.714, Hits@10:0.977, Hits@3:0.815, Hits@1:0.564
+2024-12-21 01:27:02,393 - [INFO] - [Epoch:42 | 200]: Path:rgat_vanilla||sa||lc_concat||rgcn||identity||lc_concat||rgat_vanilla||gru||lf_concat
+2024-12-21 01:27:37,132 - [INFO] - [Epoch:43 | Valid]: Loss:0.0, MRR:0.885, Hits@10:1.0, Hits@3:1.0, Hits@1:0.771
+2024-12-21 01:27:37,132 - [INFO] - [Epoch:43 | 200]: Path:rgcn||sa||lc_concat||rgcn||identity||lc_sum||rgcn||sa||lf_max
+2024-12-21 01:28:13,280 - [INFO] - [Epoch:44 | Valid]: Loss:4.219e+03, MRR:0.905, Hits@10:0.995, Hits@3:0.993, Hits@1:0.852
+2024-12-21 01:28:13,281 - [INFO] - [Epoch:44 | 200]: Path:compgcn_rotate||identity||lc_concat||rgcn||identity||lc_concat||rgat_vanilla||sa||lf_skip
+2024-12-21 01:28:56,074 - [INFO] - [Epoch:45 | Valid]: Loss:15.91, MRR:0.982, Hits@10:0.982, Hits@3:0.982, Hits@1:0.982
+2024-12-21 01:28:56,074 - [INFO] - [Epoch:45 | 200]: Path:compgcn_rotate||sa||lc_skip||rgat_vanilla||gru||lc_concat||rgcn||gru||lf_skip
+2024-12-21 01:29:32,410 - [INFO] - [Epoch:46 | Valid]: Loss:181.5, MRR:0.816, Hits@10:0.918, Hits@3:0.861, Hits@1:0.748
+2024-12-21 01:29:32,411 - [INFO] - [Epoch:46 | 200]: Path:compgcn_rotate||identity||lc_sum||rgcn||gru||lc_skip||rgat_vanilla||gru||lf_skip
+2024-12-21 01:30:23,407 - [INFO] - [Epoch:47 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:30:23,407 - [INFO] - [Epoch:47 | 200]: Path:rgat_vanilla||gru||lc_concat||rgat_vanilla||sa||lc_sum||compgcn_rotate||identity||lf_mean
+2024-12-21 01:31:06,471 - [INFO] - [Epoch:48 | Valid]: Loss:0.6206, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:31:06,471 - [INFO] - [Epoch:48 | 200]: Path:rgat_vanilla||sa||lc_skip||rgcn||gru||lc_skip||rgcn||sa||lf_max
+2024-12-21 01:31:49,028 - [INFO] - [Epoch:49 | Valid]: Loss:0.0, MRR:0.715, Hits@10:1.0, Hits@3:0.817, Hits@1:0.564
+2024-12-21 01:31:49,028 - [INFO] - [Epoch:49 | 200]: Path:rgcn||sa||lc_concat||rgat_vanilla||identity||lc_skip||rgcn||gru||lf_concat
+2024-12-21 01:32:31,846 - [INFO] - [Epoch:50 | Valid]: Loss:85.61, MRR:0.898, Hits@10:0.959, Hits@3:0.903, Hits@1:0.875
+2024-12-21 01:32:31,846 - [INFO] - [Epoch:50 | 200]: Path:rgat_vanilla||gru||lc_skip||compgcn_rotate||gru||lc_concat||compgcn_rotate||gru||lf_skip
+2024-12-21 01:33:16,792 - [INFO] - [Epoch:51 | Valid]: Loss:3.177e+04, MRR:0.813, Hits@10:1.0, Hits@3:0.811, Hits@1:0.738
+2024-12-21 01:33:16,792 - [INFO] - [Epoch:51 | 200]: Path:rgat_vanilla||identity||lc_skip||compgcn_rotate||sa||lc_concat||rgat_vanilla||gru||lf_concat
+2024-12-21 01:33:51,304 - [INFO] - [Epoch:52 | Valid]: Loss:0.0, MRR:0.714, Hits@10:1.0, Hits@3:0.817, Hits@1:0.564
+2024-12-21 01:33:51,305 - [INFO] - [Epoch:52 | 200]: Path:rgcn||sa||lc_skip||rgcn||identity||lc_sum||compgcn_rotate||gru||lf_concat
+2024-12-21 01:34:26,099 - [INFO] - [Epoch:53 | Valid]: Loss:0.0, MRR:0.908, Hits@10:1.0, Hits@3:0.9, Hits@1:0.867
+2024-12-21 01:34:26,099 - [INFO] - [Epoch:53 | 200]: Path:rgcn||identity||lc_concat||rgcn||identity||lc_concat||compgcn_rotate||sa||lf_concat
+2024-12-21 01:35:10,526 - [INFO] - [Epoch:54 | Valid]: Loss:2.11, MRR:0.983, Hits@10:0.999, Hits@3:0.999, Hits@1:0.968
+2024-12-21 01:35:10,526 - [INFO] - [Epoch:54 | 200]: Path:compgcn_rotate||identity||lc_skip||rgat_vanilla||sa||lc_skip||rgat_vanilla||sa||lf_max
+2024-12-21 01:35:44,938 - [INFO] - [Epoch:55 | Valid]: Loss:0.0, MRR:0.993, Hits@10:1.0, Hits@3:1.0, Hits@1:0.986
+2024-12-21 01:35:44,938 - [INFO] - [Epoch:55 | 200]: Path:rgcn||sa||lc_concat||rgcn||sa||lc_sum||compgcn_rotate||identity||lf_max
+2024-12-21 01:36:36,399 - [INFO] - [Epoch:56 | Valid]: Loss:180.6, MRR:0.862, Hits@10:1.0, Hits@3:1.0, Hits@1:0.725
+2024-12-21 01:36:36,399 - [INFO] - [Epoch:56 | 200]: Path:rgat_vanilla||sa||lc_skip||rgat_vanilla||identity||lc_skip||compgcn_rotate||identity||lf_skip
+2024-12-21 01:37:29,004 - [INFO] - [Epoch:57 | Valid]: Loss:290.5, MRR:0.583, Hits@10:0.756, Hits@3:0.512, Hits@1:0.512
+2024-12-21 01:37:29,004 - [INFO] - [Epoch:57 | 200]: Path:rgat_vanilla||gru||lc_sum||rgat_vanilla||gru||lc_sum||rgat_vanilla||identity||lf_skip
+2024-12-21 01:38:21,745 - [INFO] - [Epoch:58 | Valid]: Loss:2.053e-05, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 01:38:21,745 - [INFO] - [Epoch:58 | 200]: Path:rgat_vanilla||identity||lc_concat||rgat_vanilla||sa||lc_sum||rgat_vanilla||gru||lf_skip
+2024-12-21 01:39:06,551 - [INFO] - [Epoch:59 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:39:06,551 - [INFO] - [Epoch:59 | 200]: Path:rgat_vanilla||identity||lc_sum||rgcn||sa||lc_skip||rgat_vanilla||gru||lf_max
+2024-12-21 01:39:40,837 - [INFO] - [Epoch:60 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:39:40,837 - [INFO] - [Epoch:60 | 200]: Path:rgcn||sa||lc_skip||rgcn||identity||lc_skip||compgcn_rotate||gru||lf_max
+2024-12-21 01:40:32,217 - [INFO] - [Epoch:61 | Valid]: Loss:0.4722, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:0.999
+2024-12-21 01:40:32,217 - [INFO] - [Epoch:61 | 200]: Path:rgat_vanilla||gru||lc_sum||rgat_vanilla||identity||lc_concat||rgcn||gru||lf_skip
+2024-12-21 01:41:08,864 - [INFO] - [Epoch:62 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:41:08,864 - [INFO] - [Epoch:62 | 200]: Path:compgcn_rotate||sa||lc_concat||compgcn_rotate||sa||lc_skip||rgat_vanilla||sa||lf_max
+2024-12-21 01:41:43,523 - [INFO] - [Epoch:63 | Valid]: Loss:0.0, MRR:0.79, Hits@10:1.0, Hits@3:0.985, Hits@1:0.597
+2024-12-21 01:41:43,523 - [INFO] - [Epoch:63 | 200]: Path:compgcn_rotate||identity||lc_sum||rgcn||identity||lc_sum||compgcn_rotate||gru||lf_concat
+2024-12-21 01:42:18,529 - [INFO] - [Epoch:64 | Valid]: Loss:312.5, MRR:0.707, Hits@10:0.867, Hits@3:0.74, Hits@1:0.618
+2024-12-21 01:42:18,529 - [INFO] - [Epoch:64 | 200]: Path:rgcn||identity||lc_sum||compgcn_rotate||sa||lc_concat||compgcn_rotate||identity||lf_max
+2024-12-21 01:43:09,651 - [INFO] - [Epoch:65 | Valid]: Loss:0.0, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 01:43:09,651 - [INFO] - [Epoch:65 | 200]: Path:rgat_vanilla||gru||lc_concat||rgat_vanilla||gru||lc_skip||rgcn||sa||lf_mean
+2024-12-21 01:43:45,994 - [INFO] - [Epoch:66 | Valid]: Loss:297.2, MRR:0.577, Hits@10:0.756, Hits@3:0.512, Hits@1:0.512
+2024-12-21 01:43:45,994 - [INFO] - [Epoch:66 | 200]: Path:rgcn||identity||lc_skip||compgcn_rotate||sa||lc_sum||rgat_vanilla||identity||lf_skip
+2024-12-21 01:44:20,862 - [INFO] - [Epoch:67 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:44:20,862 - [INFO] - [Epoch:67 | 200]: Path:rgcn||gru||lc_skip||compgcn_rotate||sa||lc_concat||rgcn||identity||lf_max
+2024-12-21 01:44:55,501 - [INFO] - [Epoch:68 | Valid]: Loss:0.002894, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:44:55,501 - [INFO] - [Epoch:68 | 200]: Path:rgcn||identity||lc_sum||compgcn_rotate||identity||lc_skip||compgcn_rotate||identity||lf_max
+2024-12-21 01:45:30,195 - [INFO] - [Epoch:69 | Valid]: Loss:0.0, MRR:0.709, Hits@10:1.0, Hits@3:0.874, Hits@1:0.542
+2024-12-21 01:45:30,195 - [INFO] - [Epoch:69 | 200]: Path:compgcn_rotate||gru||lc_skip||rgcn||sa||lc_sum||compgcn_rotate||sa||lf_concat
+2024-12-21 01:46:06,544 - [INFO] - [Epoch:70 | Valid]: Loss:6.297, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 01:46:06,544 - [INFO] - [Epoch:70 | 200]: Path:rgcn||gru||lc_skip||compgcn_rotate||identity||lc_concat||rgat_vanilla||gru||lf_mean
+2024-12-21 01:46:49,105 - [INFO] - [Epoch:71 | Valid]: Loss:308.8, MRR:0.853, Hits@10:0.997, Hits@3:0.997, Hits@1:0.776
+2024-12-21 01:46:49,105 - [INFO] - [Epoch:71 | 200]: Path:compgcn_rotate||sa||lc_concat||rgat_vanilla||identity||lc_concat||rgcn||sa||lf_max
+2024-12-21 01:47:33,625 - [INFO] - [Epoch:72 | Valid]: Loss:0.0, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 01:47:33,625 - [INFO] - [Epoch:72 | 200]: Path:rgat_vanilla||sa||lc_sum||compgcn_rotate||gru||lc_skip||rgat_vanilla||gru||lf_mean
+2024-12-21 01:48:16,595 - [INFO] - [Epoch:73 | Valid]: Loss:0.0, MRR:0.791, Hits@10:1.0, Hits@3:1.0, Hits@1:0.598
+2024-12-21 01:48:16,595 - [INFO] - [Epoch:73 | 200]: Path:compgcn_rotate||sa||lc_sum||rgat_vanilla||identity||lc_concat||compgcn_rotate||sa||lf_concat
+2024-12-21 01:48:59,102 - [INFO] - [Epoch:74 | Valid]: Loss:7.674, MRR:0.984, Hits@10:1.0, Hits@3:1.0, Hits@1:0.968
+2024-12-21 01:48:59,102 - [INFO] - [Epoch:74 | 200]: Path:compgcn_rotate||gru||lc_concat||rgat_vanilla||gru||lc_concat||rgcn||gru||lf_max
+2024-12-21 01:49:43,593 - [INFO] - [Epoch:75 | Valid]: Loss:0.0, MRR:0.807, Hits@10:0.968, Hits@3:0.817, Hits@1:0.751
+2024-12-21 01:49:43,594 - [INFO] - [Epoch:75 | 200]: Path:rgcn||gru||lc_concat||rgat_vanilla||identity||lc_concat||rgat_vanilla||sa||lf_concat
+2024-12-21 01:50:18,706 - [INFO] - [Epoch:76 | Valid]: Loss:114.2, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:50:18,707 - [INFO] - [Epoch:76 | 200]: Path:compgcn_rotate||sa||lc_skip||compgcn_rotate||sa||lc_sum||rgcn||gru||lf_mean
+2024-12-21 01:50:54,872 - [INFO] - [Epoch:77 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:50:54,872 - [INFO] - [Epoch:77 | 200]: Path:compgcn_rotate||sa||lc_skip||compgcn_rotate||identity||lc_sum||rgat_vanilla||gru||lf_max
+2024-12-21 01:51:37,920 - [INFO] - [Epoch:78 | Valid]: Loss:1.799, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 01:51:37,920 - [INFO] - [Epoch:78 | 200]: Path:rgat_vanilla||gru||lc_skip||rgcn||gru||lc_concat||compgcn_rotate||identity||lf_mean
+2024-12-21 01:52:22,276 - [INFO] - [Epoch:79 | Valid]: Loss:1.771e+04, MRR:0.748, Hits@10:1.0, Hits@3:0.955, Hits@1:0.531
+2024-12-21 01:52:22,276 - [INFO] - [Epoch:79 | 200]: Path:rgat_vanilla||identity||lc_skip||rgcn||gru||lc_skip||rgat_vanilla||gru||lf_concat
+2024-12-21 01:53:13,204 - [INFO] - [Epoch:80 | Valid]: Loss:0.0, MRR:0.857, Hits@10:1.0, Hits@3:1.0, Hits@1:0.715
+2024-12-21 01:53:13,204 - [INFO] - [Epoch:80 | 200]: Path:rgat_vanilla||identity||lc_skip||rgat_vanilla||gru||lc_skip||compgcn_rotate||gru||lf_concat
+2024-12-21 01:53:55,789 - [INFO] - [Epoch:81 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:53:55,789 - [INFO] - [Epoch:81 | 200]: Path:rgcn||sa||lc_sum||rgat_vanilla||sa||lc_concat||rgcn||identity||lf_max
+2024-12-21 01:54:30,155 - [INFO] - [Epoch:82 | Valid]: Loss:0.4867, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 01:54:30,155 - [INFO] - [Epoch:82 | 200]: Path:rgcn||identity||lc_sum||compgcn_rotate||identity||lc_concat||rgcn||identity||lf_mean
+2024-12-21 01:55:05,156 - [INFO] - [Epoch:83 | Valid]: Loss:1.033e+06, MRR:0.726, Hits@10:1.0, Hits@3:0.811, Hits@1:0.563
+2024-12-21 01:55:05,157 - [INFO] - [Epoch:83 | 200]: Path:compgcn_rotate||sa||lc_sum||compgcn_rotate||sa||lc_sum||compgcn_rotate||identity||lf_concat
+2024-12-21 01:55:49,636 - [INFO] - [Epoch:84 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:55:49,636 - [INFO] - [Epoch:84 | 200]: Path:rgat_vanilla||sa||lc_skip||rgcn||identity||lc_sum||rgat_vanilla||gru||lf_max
+2024-12-21 01:56:23,845 - [INFO] - [Epoch:85 | Valid]: Loss:0.0, MRR:0.725, Hits@10:0.971, Hits@3:0.814, Hits@1:0.589
+2024-12-21 01:56:23,846 - [INFO] - [Epoch:85 | 200]: Path:compgcn_rotate||gru||lc_concat||rgcn||identity||lc_concat||rgcn||identity||lf_concat
+2024-12-21 01:57:00,226 - [INFO] - [Epoch:86 | Valid]: Loss:1.074e+04, MRR:0.522, Hits@10:0.512, Hits@3:0.512, Hits@1:0.483
+2024-12-21 01:57:00,226 - [INFO] - [Epoch:86 | 200]: Path:compgcn_rotate||gru||lc_concat||rgcn||identity||lc_concat||rgat_vanilla||gru||lf_max
+2024-12-21 01:57:36,498 - [INFO] - [Epoch:87 | Valid]: Loss:0.3016, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:57:36,499 - [INFO] - [Epoch:87 | 200]: Path:rgcn||identity||lc_sum||rgcn||gru||lc_sum||rgat_vanilla||sa||lf_max
+2024-12-21 01:58:10,993 - [INFO] - [Epoch:88 | Valid]: Loss:0.0, MRR:0.993, Hits@10:1.0, Hits@3:1.0, Hits@1:0.986
+2024-12-21 01:58:10,993 - [INFO] - [Epoch:88 | 200]: Path:rgcn||sa||lc_concat||compgcn_rotate||identity||lc_concat||rgcn||identity||lf_skip
+2024-12-21 01:58:45,786 - [INFO] - [Epoch:89 | Valid]: Loss:0.0, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 01:58:45,786 - [INFO] - [Epoch:89 | 200]: Path:compgcn_rotate||sa||lc_concat||compgcn_rotate||identity||lc_skip||rgcn||sa||lf_skip
+2024-12-21 01:59:28,483 - [INFO] - [Epoch:90 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 01:59:28,483 - [INFO] - [Epoch:90 | 200]: Path:rgcn||identity||lc_sum||rgat_vanilla||sa||lc_concat||rgcn||gru||lf_max
+2024-12-21 02:00:03,093 - [INFO] - [Epoch:91 | Valid]: Loss:1.01, MRR:0.984, Hits@10:0.998, Hits@3:0.998, Hits@1:0.97
+2024-12-21 02:00:03,093 - [INFO] - [Epoch:91 | 200]: Path:compgcn_rotate||identity||lc_skip||compgcn_rotate||identity||lc_concat||rgcn||identity||lf_max
+2024-12-21 02:00:45,868 - [INFO] - [Epoch:92 | Valid]: Loss:2.662e+03, MRR:0.864, Hits@10:1.0, Hits@3:1.0, Hits@1:0.727
+2024-12-21 02:00:45,868 - [INFO] - [Epoch:92 | 200]: Path:compgcn_rotate||identity||lc_skip||rgat_vanilla||identity||lc_skip||compgcn_rotate||sa||lf_max
+2024-12-21 02:01:22,274 - [INFO] - [Epoch:93 | Valid]: Loss:5.742, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:01:22,274 - [INFO] - [Epoch:93 | 200]: Path:compgcn_rotate||gru||lc_skip||rgcn||identity||lc_concat||rgat_vanilla||gru||lf_max
+2024-12-21 02:01:58,216 - [INFO] - [Epoch:94 | Valid]: Loss:68.19, MRR:0.909, Hits@10:0.948, Hits@3:0.94, Hits@1:0.876
+2024-12-21 02:01:58,216 - [INFO] - [Epoch:94 | 200]: Path:rgcn||sa||lc_sum||rgcn||gru||lc_concat||rgat_vanilla||gru||lf_skip
+2024-12-21 02:02:34,562 - [INFO] - [Epoch:95 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:02:34,562 - [INFO] - [Epoch:95 | 200]: Path:rgcn||sa||lc_skip||rgcn||gru||lc_concat||rgat_vanilla||identity||lf_max
+2024-12-21 02:03:17,425 - [INFO] - [Epoch:96 | Valid]: Loss:0.0, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:03:17,425 - [INFO] - [Epoch:96 | 200]: Path:rgcn||sa||lc_concat||rgat_vanilla||sa||lc_sum||compgcn_rotate||sa||lf_skip
+2024-12-21 02:03:53,392 - [INFO] - [Epoch:97 | Valid]: Loss:0.0, MRR:0.865, Hits@10:1.0, Hits@3:1.0, Hits@1:0.729
+2024-12-21 02:03:53,393 - [INFO] - [Epoch:97 | 200]: Path:compgcn_rotate||identity||lc_concat||rgcn||gru||lc_skip||rgat_vanilla||identity||lf_concat
+2024-12-21 02:04:38,096 - [INFO] - [Epoch:98 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:04:38,096 - [INFO] - [Epoch:98 | 200]: Path:rgat_vanilla||sa||lc_sum||rgcn||identity||lc_sum||rgat_vanilla||identity||lf_max
+2024-12-21 02:05:21,099 - [INFO] - [Epoch:99 | Valid]: Loss:5.721, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:05:21,099 - [INFO] - [Epoch:99 | 200]: Path:rgat_vanilla||sa||lc_skip||compgcn_rotate||gru||lc_sum||rgcn||sa||lf_max
+2024-12-21 02:06:03,642 - [INFO] - [Epoch:100 | Valid]: Loss:0.3862, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:06:03,642 - [INFO] - [Epoch:100 | 200]: Path:rgat_vanilla||gru||lc_sum||rgcn||gru||lc_concat||compgcn_rotate||identity||lf_mean
+2024-12-21 02:06:48,350 - [INFO] - [Epoch:101 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:06:48,350 - [INFO] - [Epoch:101 | 200]: Path:rgat_vanilla||sa||lc_skip||rgcn||sa||lc_skip||rgat_vanilla||sa||lf_max
+2024-12-21 02:07:30,653 - [INFO] - [Epoch:102 | Valid]: Loss:0.0, MRR:0.832, Hits@10:1.0, Hits@3:0.95, Hits@1:0.743
+2024-12-21 02:07:30,654 - [INFO] - [Epoch:102 | 200]: Path:rgcn||identity||lc_sum||rgat_vanilla||sa||lc_skip||compgcn_rotate||gru||lf_concat
+2024-12-21 02:08:05,606 - [INFO] - [Epoch:103 | Valid]: Loss:0.0, MRR:0.86, Hits@10:1.0, Hits@3:0.997, Hits@1:0.735
+2024-12-21 02:08:05,606 - [INFO] - [Epoch:103 | 200]: Path:rgcn||gru||lc_sum||compgcn_rotate||identity||lc_concat||compgcn_rotate||sa||lf_concat
+2024-12-21 02:08:40,339 - [INFO] - [Epoch:104 | Valid]: Loss:0.005655, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:08:40,339 - [INFO] - [Epoch:104 | 200]: Path:rgcn||gru||lc_sum||rgcn||identity||lc_sum||compgcn_rotate||gru||lf_max
+2024-12-21 02:09:23,085 - [INFO] - [Epoch:105 | Valid]: Loss:1.972e+03, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:09:23,085 - [INFO] - [Epoch:105 | 200]: Path:compgcn_rotate||sa||lc_skip||rgat_vanilla||sa||lc_skip||compgcn_rotate||sa||lf_skip
+2024-12-21 02:09:57,826 - [INFO] - [Epoch:106 | Valid]: Loss:120.3, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:09:57,827 - [INFO] - [Epoch:106 | 200]: Path:compgcn_rotate||gru||lc_sum||rgcn||gru||lc_sum||compgcn_rotate||identity||lf_skip
+2024-12-21 02:10:40,780 - [INFO] - [Epoch:107 | Valid]: Loss:0.0, MRR:0.688, Hits@10:0.956, Hits@3:0.81, Hits@1:0.527
+2024-12-21 02:10:40,780 - [INFO] - [Epoch:107 | 200]: Path:rgat_vanilla||sa||lc_skip||rgcn||gru||lc_sum||rgcn||identity||lf_concat
+2024-12-21 02:11:33,132 - [INFO] - [Epoch:108 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:11:33,132 - [INFO] - [Epoch:108 | 200]: Path:rgat_vanilla||sa||lc_sum||rgat_vanilla||gru||lc_concat||rgat_vanilla||sa||lf_max
+2024-12-21 02:12:16,348 - [INFO] - [Epoch:109 | Valid]: Loss:0.0, MRR:0.768, Hits@10:1.0, Hits@3:1.0, Hits@1:0.546
+2024-12-21 02:12:16,348 - [INFO] - [Epoch:109 | 200]: Path:rgat_vanilla||gru||lc_concat||rgcn||sa||lc_sum||compgcn_rotate||sa||lf_concat
+2024-12-21 02:13:00,566 - [INFO] - [Epoch:110 | Valid]: Loss:206.8, MRR:0.779, Hits@10:0.893, Hits@3:0.827, Hits@1:0.701
+2024-12-21 02:13:00,566 - [INFO] - [Epoch:110 | 200]: Path:rgat_vanilla||identity||lc_skip||rgcn||gru||lc_sum||rgat_vanilla||gru||lf_skip
+2024-12-21 02:13:36,749 - [INFO] - [Epoch:111 | Valid]: Loss:0.00311, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:13:36,749 - [INFO] - [Epoch:111 | 200]: Path:rgcn||identity||lc_skip||rgcn||gru||lc_concat||rgat_vanilla||gru||lf_max
+2024-12-21 02:14:11,446 - [INFO] - [Epoch:112 | Valid]: Loss:118.2, MRR:0.909, Hits@10:1.0, Hits@3:0.992, Hits@1:0.825
+2024-12-21 02:14:11,446 - [INFO] - [Epoch:112 | 200]: Path:compgcn_rotate||identity||lc_skip||compgcn_rotate||identity||lc_skip||rgcn||gru||lf_max
+2024-12-21 02:14:46,200 - [INFO] - [Epoch:113 | Valid]: Loss:0.0, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:14:46,201 - [INFO] - [Epoch:113 | 200]: Path:compgcn_rotate||gru||lc_concat||compgcn_rotate||identity||lc_skip||rgcn||sa||lf_mean
+2024-12-21 02:15:28,927 - [INFO] - [Epoch:114 | Valid]: Loss:2.497e+05, MRR:0.806, Hits@10:1.0, Hits@3:0.811, Hits@1:0.724
+2024-12-21 02:15:28,927 - [INFO] - [Epoch:114 | 200]: Path:rgat_vanilla||identity||lc_sum||compgcn_rotate||sa||lc_sum||compgcn_rotate||identity||lf_concat
+2024-12-21 02:16:13,490 - [INFO] - [Epoch:115 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:16:13,490 - [INFO] - [Epoch:115 | 200]: Path:compgcn_rotate||sa||lc_sum||rgat_vanilla||gru||lc_concat||rgat_vanilla||sa||lf_max
+2024-12-21 02:17:04,033 - [INFO] - [Epoch:116 | Valid]: Loss:0.0, MRR:0.688, Hits@10:0.956, Hits@3:0.81, Hits@1:0.527
+2024-12-21 02:17:04,033 - [INFO] - [Epoch:116 | 200]: Path:rgat_vanilla||sa||lc_sum||rgat_vanilla||identity||lc_sum||rgcn||identity||lf_concat
+2024-12-21 02:17:46,728 - [INFO] - [Epoch:117 | Valid]: Loss:5.212, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:17:46,728 - [INFO] - [Epoch:117 | 200]: Path:rgcn||identity||lc_sum||rgat_vanilla||gru||lc_concat||compgcn_rotate||identity||lf_mean
+2024-12-21 02:18:23,177 - [INFO] - [Epoch:118 | Valid]: Loss:551.3, MRR:0.524, Hits@10:0.518, Hits@3:0.512, Hits@1:0.483
+2024-12-21 02:18:23,177 - [INFO] - [Epoch:118 | 200]: Path:rgcn||identity||lc_sum||compgcn_rotate||sa||lc_skip||rgat_vanilla||sa||lf_skip
+2024-12-21 02:19:05,936 - [INFO] - [Epoch:119 | Valid]: Loss:79.36, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:19:05,936 - [INFO] - [Epoch:119 | 200]: Path:rgat_vanilla||identity||lc_skip||rgcn||gru||lc_sum||compgcn_rotate||identity||lf_mean
+2024-12-21 02:19:40,932 - [INFO] - [Epoch:120 | Valid]: Loss:0.6402, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:19:40,933 - [INFO] - [Epoch:120 | 200]: Path:compgcn_rotate||gru||lc_skip||compgcn_rotate||identity||lc_skip||compgcn_rotate||identity||lf_max
+2024-12-21 02:20:17,455 - [INFO] - [Epoch:121 | Valid]: Loss:0.0, MRR:0.676, Hits@10:1.0, Hits@3:0.815, Hits@1:0.465
+2024-12-21 02:20:17,455 - [INFO] - [Epoch:121 | 200]: Path:compgcn_rotate||gru||lc_sum||compgcn_rotate||gru||lc_sum||rgat_vanilla||gru||lf_concat
+2024-12-21 02:20:51,864 - [INFO] - [Epoch:122 | Valid]: Loss:0.0, MRR:0.993, Hits@10:1.0, Hits@3:1.0, Hits@1:0.986
+2024-12-21 02:20:51,864 - [INFO] - [Epoch:122 | 200]: Path:compgcn_rotate||sa||lc_sum||rgcn||gru||lc_skip||compgcn_rotate||gru||lf_max
+2024-12-21 02:21:26,434 - [INFO] - [Epoch:123 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:21:26,434 - [INFO] - [Epoch:123 | 200]: Path:rgcn||identity||lc_concat||rgcn||identity||lc_concat||rgcn||identity||lf_mean
+2024-12-21 02:22:10,552 - [INFO] - [Epoch:124 | Valid]: Loss:0.0, MRR:0.726, Hits@10:1.0, Hits@3:0.815, Hits@1:0.564
+2024-12-21 02:22:10,553 - [INFO] - [Epoch:124 | 200]: Path:rgcn||gru||lc_concat||rgat_vanilla||identity||lc_sum||rgat_vanilla||identity||lf_concat
+2024-12-21 02:22:53,446 - [INFO] - [Epoch:125 | Valid]: Loss:0.0, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:22:53,446 - [INFO] - [Epoch:125 | 200]: Path:rgat_vanilla||gru||lc_concat||rgcn||gru||lc_sum||compgcn_rotate||sa||lf_mean
+2024-12-21 02:23:28,292 - [INFO] - [Epoch:126 | Valid]: Loss:246.8, MRR:0.695, Hits@10:0.754, Hits@3:0.736, Hits@1:0.624
+2024-12-21 02:23:28,293 - [INFO] - [Epoch:126 | 200]: Path:compgcn_rotate||gru||lc_skip||rgcn||gru||lc_skip||rgcn||gru||lf_skip
+2024-12-21 02:24:11,099 - [INFO] - [Epoch:127 | Valid]: Loss:0.1429, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:24:11,099 - [INFO] - [Epoch:127 | 200]: Path:rgat_vanilla||gru||lc_sum||compgcn_rotate||gru||lc_sum||rgcn||identity||lf_mean
+2024-12-21 02:24:45,615 - [INFO] - [Epoch:128 | Valid]: Loss:2.846e+03, MRR:0.864, Hits@10:1.0, Hits@3:1.0, Hits@1:0.727
+2024-12-21 02:24:45,615 - [INFO] - [Epoch:128 | 200]: Path:compgcn_rotate||identity||lc_skip||rgcn||identity||lc_skip||compgcn_rotate||sa||lf_max
+2024-12-21 02:25:21,993 - [INFO] - [Epoch:129 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:25:21,993 - [INFO] - [Epoch:129 | 200]: Path:rgcn||identity||lc_skip||rgcn||sa||lc_concat||rgat_vanilla||sa||lf_max
+2024-12-21 02:25:58,448 - [INFO] - [Epoch:130 | Valid]: Loss:0.0, MRR:0.761, Hits@10:1.0, Hits@3:0.892, Hits@1:0.589
+2024-12-21 02:25:58,449 - [INFO] - [Epoch:130 | 200]: Path:compgcn_rotate||sa||lc_skip||rgcn||gru||lc_sum||rgat_vanilla||gru||lf_concat
+2024-12-21 02:26:42,749 - [INFO] - [Epoch:131 | Valid]: Loss:0.0, MRR:0.732, Hits@10:1.0, Hits@3:0.905, Hits@1:0.555
+2024-12-21 02:26:42,749 - [INFO] - [Epoch:131 | 200]: Path:rgat_vanilla||gru||lc_skip||rgcn||sa||lc_sum||rgat_vanilla||sa||lf_concat
+2024-12-21 02:27:25,303 - [INFO] - [Epoch:132 | Valid]: Loss:0.0275, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:27:25,303 - [INFO] - [Epoch:132 | 200]: Path:rgcn||sa||lc_sum||rgat_vanilla||gru||lc_sum||rgcn||gru||lf_mean
+2024-12-21 02:28:17,678 - [INFO] - [Epoch:133 | Valid]: Loss:640.2, MRR:0.523, Hits@10:0.512, Hits@3:0.512, Hits@1:0.483
+2024-12-21 02:28:17,678 - [INFO] - [Epoch:133 | 200]: Path:rgat_vanilla||sa||lc_skip||rgat_vanilla||identity||lc_skip||rgat_vanilla||sa||lf_skip
+2024-12-21 02:28:52,277 - [INFO] - [Epoch:134 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:28:52,278 - [INFO] - [Epoch:134 | 200]: Path:rgcn||identity||lc_skip||rgcn||sa||lc_sum||rgcn||identity||lf_max
+2024-12-21 02:29:28,626 - [INFO] - [Epoch:135 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:29:28,626 - [INFO] - [Epoch:135 | 200]: Path:rgcn||gru||lc_skip||rgcn||sa||lc_sum||rgat_vanilla||identity||lf_max
+2024-12-21 02:30:11,318 - [INFO] - [Epoch:136 | Valid]: Loss:2.411e+03, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:30:11,319 - [INFO] - [Epoch:136 | 200]: Path:rgat_vanilla||sa||lc_skip||rgcn||gru||lc_sum||compgcn_rotate||sa||lf_skip
+2024-12-21 02:30:55,584 - [INFO] - [Epoch:137 | Valid]: Loss:8.289e+04, MRR:0.856, Hits@10:1.0, Hits@3:1.0, Hits@1:0.727
+2024-12-21 02:30:55,584 - [INFO] - [Epoch:137 | 200]: Path:rgcn||gru||lc_concat||rgat_vanilla||sa||lc_sum||rgat_vanilla||gru||lf_concat
+2024-12-21 02:31:40,040 - [INFO] - [Epoch:138 | Valid]: Loss:0.0, MRR:0.713, Hits@10:0.996, Hits@3:0.815, Hits@1:0.564
+2024-12-21 02:31:40,040 - [INFO] - [Epoch:138 | 200]: Path:rgat_vanilla||sa||lc_concat||rgcn||identity||lc_skip||rgat_vanilla||gru||lf_concat
+2024-12-21 02:32:14,501 - [INFO] - [Epoch:139 | Valid]: Loss:0.3654, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:32:14,502 - [INFO] - [Epoch:139 | 200]: Path:rgcn||identity||lc_sum||rgcn||identity||lc_sum||compgcn_rotate||identity||lf_max
+2024-12-21 02:33:06,018 - [INFO] - [Epoch:140 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:33:06,018 - [INFO] - [Epoch:140 | 200]: Path:rgat_vanilla||sa||lc_sum||rgat_vanilla||identity||lc_sum||rgcn||gru||lf_max
+2024-12-21 02:33:48,328 - [INFO] - [Epoch:141 | Valid]: Loss:0.0, MRR:0.726, Hits@10:1.0, Hits@3:0.815, Hits@1:0.564
+2024-12-21 02:33:48,328 - [INFO] - [Epoch:141 | 200]: Path:compgcn_rotate||sa||lc_skip||rgat_vanilla||gru||lc_concat||rgcn||identity||lf_concat
+2024-12-21 02:34:39,523 - [INFO] - [Epoch:142 | Valid]: Loss:149.2, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:34:39,523 - [INFO] - [Epoch:142 | 200]: Path:rgat_vanilla||gru||lc_skip||rgat_vanilla||gru||lc_skip||rgcn||identity||lf_skip
+2024-12-21 02:35:14,278 - [INFO] - [Epoch:143 | Valid]: Loss:52.84, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:35:14,278 - [INFO] - [Epoch:143 | 200]: Path:compgcn_rotate||identity||lc_skip||rgcn||identity||lc_sum||rgcn||sa||lf_mean
+2024-12-21 02:35:48,821 - [INFO] - [Epoch:144 | Valid]: Loss:0.0, MRR:0.988, Hits@10:1.0, Hits@3:1.0, Hits@1:0.976
+2024-12-21 02:35:48,822 - [INFO] - [Epoch:144 | 200]: Path:compgcn_rotate||gru||lc_concat||compgcn_rotate||sa||lc_skip||rgcn||identity||lf_mean
+2024-12-21 02:36:23,620 - [INFO] - [Epoch:145 | Valid]: Loss:0.2673, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:36:23,620 - [INFO] - [Epoch:145 | 200]: Path:rgcn||sa||lc_sum||compgcn_rotate||identity||lc_concat||rgcn||gru||lf_mean
+2024-12-21 02:37:08,319 - [INFO] - [Epoch:146 | Valid]: Loss:402.2, MRR:0.787, Hits@10:0.94, Hits@3:0.771, Hits@1:0.738
+2024-12-21 02:37:08,319 - [INFO] - [Epoch:146 | 200]: Path:rgat_vanilla||sa||lc_concat||rgcn||identity||lc_sum||rgat_vanilla||gru||lf_max
+2024-12-21 02:37:44,259 - [INFO] - [Epoch:147 | Valid]: Loss:150.8, MRR:0.841, Hits@10:0.944, Hits@3:0.888, Hits@1:0.778
+2024-12-21 02:37:44,259 - [INFO] - [Epoch:147 | 200]: Path:compgcn_rotate||sa||lc_sum||compgcn_rotate||gru||lc_sum||rgat_vanilla||gru||lf_skip
+2024-12-21 02:38:37,183 - [INFO] - [Epoch:148 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:38:37,183 - [INFO] - [Epoch:148 | 200]: Path:rgat_vanilla||gru||lc_concat||rgat_vanilla||sa||lc_concat||rgat_vanilla||identity||lf_mean
+2024-12-21 02:39:11,904 - [INFO] - [Epoch:149 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:39:11,904 - [INFO] - [Epoch:149 | 200]: Path:rgcn||sa||lc_sum||compgcn_rotate||sa||lc_skip||rgcn||sa||lf_mean
+2024-12-21 02:39:54,855 - [INFO] - [Epoch:150 | Valid]: Loss:2.537e+03, MRR:0.864, Hits@10:1.0, Hits@3:1.0, Hits@1:0.727
+2024-12-21 02:39:54,855 - [INFO] - [Epoch:150 | 200]: Path:rgat_vanilla||gru||lc_skip||rgcn||gru||lc_skip||compgcn_rotate||sa||lf_max
+2024-12-21 02:40:47,790 - [INFO] - [Epoch:151 | Valid]: Loss:0.0, MRR:0.843, Hits@10:1.0, Hits@3:0.951, Hits@1:0.727
+2024-12-21 02:40:47,790 - [INFO] - [Epoch:151 | 200]: Path:rgat_vanilla||gru||lc_sum||rgat_vanilla||sa||lc_skip||rgat_vanilla||identity||lf_concat
+2024-12-21 02:41:31,729 - [INFO] - [Epoch:152 | Valid]: Loss:0.01414, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:41:31,729 - [INFO] - [Epoch:152 | 200]: Path:compgcn_rotate||gru||lc_skip||rgat_vanilla||identity||lc_sum||rgat_vanilla||gru||lf_max
+2024-12-21 02:42:14,888 - [INFO] - [Epoch:153 | Valid]: Loss:0.0, MRR:0.982, Hits@10:1.0, Hits@3:1.0, Hits@1:0.963
+2024-12-21 02:42:14,889 - [INFO] - [Epoch:153 | 200]: Path:rgat_vanilla||gru||lc_skip||rgcn||gru||lc_concat||compgcn_rotate||sa||lf_max
+2024-12-21 02:42:57,241 - [INFO] - [Epoch:154 | Valid]: Loss:0.9238, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:42:57,241 - [INFO] - [Epoch:154 | 200]: Path:rgcn||gru||lc_skip||rgat_vanilla||gru||lc_skip||rgcn||gru||lf_mean
+2024-12-21 02:43:40,009 - [INFO] - [Epoch:155 | Valid]: Loss:0.0, MRR:0.717, Hits@10:0.989, Hits@3:0.815, Hits@1:0.564
+2024-12-21 02:43:40,009 - [INFO] - [Epoch:155 | 200]: Path:rgat_vanilla||identity||lc_concat||rgcn||identity||lc_sum||rgcn||sa||lf_concat
+2024-12-21 02:44:31,441 - [INFO] - [Epoch:156 | Valid]: Loss:0.0, MRR:0.993, Hits@10:1.0, Hits@3:1.0, Hits@1:0.986
+2024-12-21 02:44:31,441 - [INFO] - [Epoch:156 | 200]: Path:rgat_vanilla||gru||lc_concat||rgat_vanilla||sa||lc_skip||compgcn_rotate||sa||lf_max
+2024-12-21 02:45:15,285 - [INFO] - [Epoch:157 | Valid]: Loss:29.93, MRR:0.998, Hits@10:1.0, Hits@3:1.0, Hits@1:0.996
+2024-12-21 02:45:15,285 - [INFO] - [Epoch:157 | 200]: Path:rgcn||identity||lc_concat||rgat_vanilla||sa||lc_sum||rgat_vanilla||identity||lf_skip
+2024-12-21 02:45:50,071 - [INFO] - [Epoch:158 | Valid]: Loss:56.1, MRR:0.806, Hits@10:1.0, Hits@3:0.811, Hits@1:0.724
+2024-12-21 02:45:50,071 - [INFO] - [Epoch:158 | 200]: Path:rgcn||identity||lc_skip||compgcn_rotate||sa||lc_skip||compgcn_rotate||identity||lf_concat
+2024-12-21 02:46:32,946 - [INFO] - [Epoch:159 | Valid]: Loss:0.0, MRR:0.623, Hits@10:1.0, Hits@3:0.903, Hits@1:0.306
+2024-12-21 02:46:32,947 - [INFO] - [Epoch:159 | 200]: Path:rgat_vanilla||gru||lc_skip||compgcn_rotate||gru||lc_sum||rgcn||gru||lf_concat
+2024-12-21 02:47:07,378 - [INFO] - [Epoch:160 | Valid]: Loss:0.0, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:47:07,378 - [INFO] - [Epoch:160 | 200]: Path:rgcn||gru||lc_concat||compgcn_rotate||identity||lc_skip||compgcn_rotate||sa||lf_mean
+2024-12-21 02:47:42,149 - [INFO] - [Epoch:161 | Valid]: Loss:0.0, MRR:0.716, Hits@10:1.0, Hits@3:0.817, Hits@1:0.567
+2024-12-21 02:47:42,149 - [INFO] - [Epoch:161 | 200]: Path:rgcn||sa||lc_skip||compgcn_rotate||identity||lc_concat||rgcn||identity||lf_concat
+2024-12-21 02:48:24,885 - [INFO] - [Epoch:162 | Valid]: Loss:26.3, MRR:0.998, Hits@10:1.0, Hits@3:0.999, Hits@1:0.997
+2024-12-21 02:48:24,885 - [INFO] - [Epoch:162 | 200]: Path:rgcn||sa||lc_sum||rgat_vanilla||identity||lc_skip||compgcn_rotate||gru||lf_skip
+2024-12-21 02:49:01,371 - [INFO] - [Epoch:163 | Valid]: Loss:4.219e+03, MRR:0.905, Hits@10:0.995, Hits@3:0.993, Hits@1:0.852
+2024-12-21 02:49:01,371 - [INFO] - [Epoch:163 | 200]: Path:compgcn_rotate||identity||lc_concat||rgcn||sa||lc_concat||rgat_vanilla||sa||lf_skip
+2024-12-21 02:49:54,444 - [INFO] - [Epoch:164 | Valid]: Loss:5.96e-08, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:49:54,444 - [INFO] - [Epoch:164 | 200]: Path:rgat_vanilla||gru||lc_skip||rgat_vanilla||sa||lc_skip||rgat_vanilla||sa||lf_max
+2024-12-21 02:50:29,034 - [INFO] - [Epoch:165 | Valid]: Loss:1.034e+03, MRR:0.871, Hits@10:0.982, Hits@3:0.979, Hits@1:0.804
+2024-12-21 02:50:29,035 - [INFO] - [Epoch:165 | 200]: Path:compgcn_rotate||gru||lc_skip||rgcn||sa||lc_concat||rgcn||sa||lf_skip
+2024-12-21 02:51:13,396 - [INFO] - [Epoch:166 | Valid]: Loss:639.2, MRR:0.523, Hits@10:0.512, Hits@3:0.512, Hits@1:0.483
+2024-12-21 02:51:13,397 - [INFO] - [Epoch:166 | 200]: Path:rgcn||sa||lc_skip||rgat_vanilla||gru||lc_skip||rgat_vanilla||sa||lf_skip
+2024-12-21 02:51:55,964 - [INFO] - [Epoch:167 | Valid]: Loss:1.06, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:51:55,964 - [INFO] - [Epoch:167 | 200]: Path:rgcn||gru||lc_sum||rgat_vanilla||identity||lc_sum||rgcn||identity||lf_mean
+2024-12-21 02:52:40,192 - [INFO] - [Epoch:168 | Valid]: Loss:0.0, MRR:0.832, Hits@10:1.0, Hits@3:0.955, Hits@1:0.731
+2024-12-21 02:52:40,192 - [INFO] - [Epoch:168 | 200]: Path:rgat_vanilla||sa||lc_sum||compgcn_rotate||sa||lc_concat||rgat_vanilla||identity||lf_concat
+2024-12-21 02:53:16,910 - [INFO] - [Epoch:169 | Valid]: Loss:36.15, MRR:0.936, Hits@10:0.957, Hits@3:0.95, Hits@1:0.916
+2024-12-21 02:53:16,910 - [INFO] - [Epoch:169 | 200]: Path:compgcn_rotate||sa||lc_sum||compgcn_rotate||sa||lc_concat||rgat_vanilla||gru||lf_skip
+2024-12-21 02:53:51,798 - [INFO] - [Epoch:170 | Valid]: Loss:23.12, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:53:51,798 - [INFO] - [Epoch:170 | 200]: Path:compgcn_rotate||identity||lc_skip||compgcn_rotate||identity||lc_concat||compgcn_rotate||identity||lf_max
+2024-12-21 02:54:26,075 - [INFO] - [Epoch:171 | Valid]: Loss:0.0, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:54:26,075 - [INFO] - [Epoch:171 | 200]: Path:rgcn||identity||lc_concat||rgcn||gru||lc_sum||compgcn_rotate||sa||lf_skip
+2024-12-21 02:55:01,215 - [INFO] - [Epoch:172 | Valid]: Loss:0.0, MRR:0.77, Hits@10:1.0, Hits@3:1.0, Hits@1:0.549
+2024-12-21 02:55:01,216 - [INFO] - [Epoch:172 | 200]: Path:rgcn||gru||lc_concat||rgcn||sa||lc_concat||compgcn_rotate||sa||lf_concat
+2024-12-21 02:55:35,895 - [INFO] - [Epoch:173 | Valid]: Loss:0.6219, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:55:35,895 - [INFO] - [Epoch:173 | 200]: Path:rgcn||identity||lc_skip||compgcn_rotate||identity||lc_concat||rgcn||identity||lf_mean
+2024-12-21 02:56:10,625 - [INFO] - [Epoch:174 | Valid]: Loss:0.0, MRR:0.95, Hits@10:1.0, Hits@3:1.0, Hits@1:0.902
+2024-12-21 02:56:10,625 - [INFO] - [Epoch:174 | 200]: Path:compgcn_rotate||gru||lc_skip||compgcn_rotate||sa||lc_concat||compgcn_rotate||sa||lf_skip
+2024-12-21 02:56:53,364 - [INFO] - [Epoch:175 | Valid]: Loss:1.359e+06, MRR:0.707, Hits@10:0.997, Hits@3:0.818, Hits@1:0.549
+2024-12-21 02:56:53,365 - [INFO] - [Epoch:175 | 200]: Path:compgcn_rotate||sa||lc_skip||rgat_vanilla||gru||lc_sum||compgcn_rotate||sa||lf_concat
+2024-12-21 02:57:37,744 - [INFO] - [Epoch:176 | Valid]: Loss:2.673, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 02:57:37,744 - [INFO] - [Epoch:176 | 200]: Path:compgcn_rotate||gru||lc_sum||rgat_vanilla||gru||lc_concat||rgat_vanilla||identity||lf_mean
+2024-12-21 02:58:28,586 - [INFO] - [Epoch:177 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 02:58:28,586 - [INFO] - [Epoch:177 | 200]: Path:rgat_vanilla||gru||lc_sum||rgat_vanilla||sa||lc_skip||rgcn||gru||lf_mean
+2024-12-21 02:59:13,214 - [INFO] - [Epoch:178 | Valid]: Loss:226.9, MRR:0.718, Hits@10:0.879, Hits@3:0.794, Hits@1:0.607
+2024-12-21 02:59:13,214 - [INFO] - [Epoch:178 | 200]: Path:rgat_vanilla||gru||lc_skip||compgcn_rotate||identity||lc_skip||rgat_vanilla||gru||lf_skip
+2024-12-21 02:59:55,588 - [INFO] - [Epoch:179 | Valid]: Loss:0.3001, MRR:0.988, Hits@10:1.0, Hits@3:1.0, Hits@1:0.977
+2024-12-21 02:59:55,589 - [INFO] - [Epoch:179 | 200]: Path:compgcn_rotate||gru||lc_skip||rgat_vanilla||identity||lc_concat||compgcn_rotate||gru||lf_max
+2024-12-21 03:00:30,235 - [INFO] - [Epoch:180 | Valid]: Loss:0.002112, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 03:00:30,235 - [INFO] - [Epoch:180 | 200]: Path:rgcn||identity||lc_skip||compgcn_rotate||gru||lc_sum||rgcn||identity||lf_max
+2024-12-21 03:01:05,427 - [INFO] - [Epoch:181 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 03:01:05,427 - [INFO] - [Epoch:181 | 200]: Path:rgcn||gru||lc_sum||compgcn_rotate||gru||lc_sum||compgcn_rotate||sa||lf_mean
+2024-12-21 03:01:56,030 - [INFO] - [Epoch:182 | Valid]: Loss:1.701, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 03:01:56,030 - [INFO] - [Epoch:182 | 200]: Path:rgat_vanilla||gru||lc_skip||rgat_vanilla||gru||lc_skip||rgcn||gru||lf_mean
+2024-12-21 03:02:40,069 - [INFO] - [Epoch:183 | Valid]: Loss:1.501, MRR:0.984, Hits@10:1.0, Hits@3:1.0, Hits@1:0.967
+2024-12-21 03:02:40,069 - [INFO] - [Epoch:183 | 200]: Path:rgcn||identity||lc_sum||rgat_vanilla||identity||lc_concat||rgat_vanilla||identity||lf_max
+2024-12-21 03:03:24,744 - [INFO] - [Epoch:184 | Valid]: Loss:0.0, MRR:0.42, Hits@10:0.956, Hits@3:0.81, Hits@1:0.068
+2024-12-21 03:03:24,745 - [INFO] - [Epoch:184 | 200]: Path:rgat_vanilla||sa||lc_concat||compgcn_rotate||identity||lc_sum||rgat_vanilla||gru||lf_concat
+2024-12-21 03:04:07,439 - [INFO] - [Epoch:185 | Valid]: Loss:5.785e-06, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 03:04:07,439 - [INFO] - [Epoch:185 | 200]: Path:rgat_vanilla||identity||lc_concat||compgcn_rotate||gru||lc_skip||compgcn_rotate||gru||lf_max
+2024-12-21 03:04:42,215 - [INFO] - [Epoch:186 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 03:04:42,215 - [INFO] - [Epoch:186 | 200]: Path:compgcn_rotate||identity||lc_concat||compgcn_rotate||identity||lc_sum||rgcn||identity||lf_max
+2024-12-21 03:05:26,381 - [INFO] - [Epoch:187 | Valid]: Loss:5.604, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 03:05:26,382 - [INFO] - [Epoch:187 | 200]: Path:rgat_vanilla||identity||lc_sum||rgcn||identity||lc_sum||rgat_vanilla||gru||lf_max
+2024-12-21 03:06:10,774 - [INFO] - [Epoch:188 | Valid]: Loss:8.614, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 03:06:10,775 - [INFO] - [Epoch:188 | 200]: Path:rgat_vanilla||gru||lc_concat||rgcn||sa||lc_skip||rgat_vanilla||identity||lf_skip
+2024-12-21 03:06:45,697 - [INFO] - [Epoch:189 | Valid]: Loss:4.303e+05, MRR:0.783, Hits@10:1.0, Hits@3:1.0, Hits@1:0.576
+2024-12-21 03:06:45,698 - [INFO] - [Epoch:189 | 200]: Path:compgcn_rotate||sa||lc_concat||rgcn||sa||lc_sum||rgcn||identity||lf_concat
+2024-12-21 03:07:21,919 - [INFO] - [Epoch:190 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 03:07:21,920 - [INFO] - [Epoch:190 | 200]: Path:compgcn_rotate||sa||lc_concat||compgcn_rotate||sa||lc_skip||rgat_vanilla||gru||lf_max
+2024-12-21 03:08:04,395 - [INFO] - [Epoch:191 | Valid]: Loss:6.103e-06, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 03:08:04,395 - [INFO] - [Epoch:191 | 200]: Path:rgcn||gru||lc_concat||rgat_vanilla||gru||lc_skip||compgcn_rotate||gru||lf_max
+2024-12-21 03:08:57,221 - [INFO] - [Epoch:192 | Valid]: Loss:0.4731, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 03:08:57,222 - [INFO] - [Epoch:192 | 200]: Path:rgat_vanilla||gru||lc_sum||rgat_vanilla||gru||lc_concat||rgat_vanilla||gru||lf_max
+2024-12-21 03:09:40,160 - [INFO] - [Epoch:193 | Valid]: Loss:0.0, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 03:09:40,160 - [INFO] - [Epoch:193 | 200]: Path:rgat_vanilla||sa||lc_concat||rgcn||sa||lc_sum||compgcn_rotate||sa||lf_skip
+2024-12-21 03:10:15,239 - [INFO] - [Epoch:194 | Valid]: Loss:0.0, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 03:10:15,239 - [INFO] - [Epoch:194 | 200]: Path:compgcn_rotate||gru||lc_concat||compgcn_rotate||sa||lc_concat||compgcn_rotate||identity||lf_max
+2024-12-21 03:11:06,273 - [INFO] - [Epoch:195 | Valid]: Loss:241.8, MRR:0.986, Hits@10:1.0, Hits@3:1.0, Hits@1:0.971
+2024-12-21 03:11:06,273 - [INFO] - [Epoch:195 | 200]: Path:rgat_vanilla||identity||lc_sum||rgat_vanilla||gru||lc_sum||rgcn||sa||lf_skip
+2024-12-21 03:11:59,301 - [INFO] - [Epoch:196 | Valid]: Loss:0.001161, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 03:11:59,301 - [INFO] - [Epoch:196 | 200]: Path:rgat_vanilla||gru||lc_concat||rgat_vanilla||gru||lc_sum||rgat_vanilla||gru||lf_mean
+2024-12-21 03:12:43,726 - [INFO] - [Epoch:197 | Valid]: Loss:206.4, MRR:0.779, Hits@10:0.893, Hits@3:0.827, Hits@1:0.701
+2024-12-21 03:12:43,726 - [INFO] - [Epoch:197 | 200]: Path:rgat_vanilla||gru||lc_skip||rgcn||sa||lc_sum||rgat_vanilla||gru||lf_skip
+2024-12-21 03:13:25,985 - [INFO] - [Epoch:198 | Valid]: Loss:0.0, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 03:13:25,985 - [INFO] - [Epoch:198 | 200]: Path:rgcn||identity||lc_skip||rgat_vanilla||sa||lc_concat||compgcn_rotate||sa||lf_mean
+2024-12-21 03:14:01,090 - [INFO] - [Epoch:199 | Valid]: Loss:708.9, MRR:0.911, Hits@10:1.0, Hits@3:1.0, Hits@1:0.821
+2024-12-21 03:14:01,091 - [INFO] - [Epoch:199 | 200]: Path:rgcn||sa||lc_skip||compgcn_rotate||sa||lc_sum||compgcn_rotate||sa||lf_max
+2024-12-21 03:14:43,747 - [INFO] - [Epoch:200 | Valid]: Loss:0.0, MRR:0.746, Hits@10:1.0, Hits@3:0.95, Hits@1:0.571
+2024-12-21 03:14:43,747 - [INFO] - [Epoch:200 | 200]: Path:compgcn_rotate||sa||lc_sum||rgat_vanilla||sa||lc_sum||rgcn||gru||lf_concat
+2024-12-21 03:14:43,747 - [INFO] - The search process costs 2.19h.

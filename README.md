@@ -14,7 +14,7 @@ This repository contains the code for [Search to Pass Messages for Temporal Know
 conda create -n spa python=3.8
 pip install torch==1.9.0+cu111 torchvision==0.10.0+cu111 torchaudio==0.9.0 -f https://download.pytorch.org/whl/torch_stable.html
 conda install dglteam::dgl-cuda11.1
-pip -r requirements.txt
+pip install -r requirements.txt
 ```
 ```text
 python=3.8

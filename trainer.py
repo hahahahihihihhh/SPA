@@ -144,7 +144,7 @@ class Trainer(object):
     def train_epoch(self, current_epoch, model, architect=None, lr=None, mode='NONE'):
         train_loss_list = []
         for batch_idx, train_timestamps in enumerate(self.train_loader):
-            print(batch_idx, train_timestamps)
+            # print(batch_idx, train_timestamps)
             if mode == "spos_search":
                 train_loss = model(train_timestamps)
                 train_loss_list.append(train_loss.item())
@@ -355,7 +355,7 @@ class Trainer(object):
             writer = csv.writer(f)
             writer.writerow(['valid mrr', 'arch'])
             res = valid_mrr_searched_arch_res.items()
-            for i in range(min(500, self.args.arch_sample_num)):
+            for i in range(min(10, self.args.arch_sample_num)):
                 writer.writerow([res[-1-i][0], res[-1-i][1]])
 
         return res[-1][1]

@@ -1,0 +1,28 @@
+2024-12-21 13:07:54,932 - [INFO] - Namespace(arch=['rgcn', 'sa', 'lc_skip', 'rgcn', 'gru', 'lc_skip', 'compgcn_rotate', 'gru', 'lf_concat'], arch_learning_rate=0.01, arch_sample_num=200, arch_weight_decay=0.001, base_num=1, baseline_sample_num=30, batch_size=16, comp_op='corr', dataset='SZ_TAXI_D/', dataset_dir='datasets/', dropout=0.1, embed_size=128, encoder='SPATune', fixed_ops='', genotype='compgcn_rotate||gru||lc_skip||compgcn_rotate||identity||lc_skip||rgat_vanilla||gru||lf_mean', gnn_layer_num=3, grad_clip=1, head_num=2, hidden_size=128, index=9, inv_temperature=0.1, isolated_change=False, learning_rate=0.005, log_dir='logs/', max_epoch=200, min_arch_learning_rate=0.0005, min_learning_rate=0.001, momentum=0.9, negative_sampling_num=500, optimizer='adam', positive_fact_num=3000, random_seed=43, rec_only_last_layer=True, rnn_layer_num=1, sampled_dataset=False, save_model=False, saved_model_dir='saved_models/SZ_TAXI_D/', score_function='complex', search_max_epoch=200, search_mode='spos_search', search_res_dir='searched_res/', search_res_file='searched_res/SZ_TAXI_D/spos_search/20241221_010330.json', search_run_num=1, seq_head_num=2, stand_alone_path='', tensorboard_dir='tensorboard/', test_seq_len=12, time_log_dir='', train_mode='tune', train_seq_len=12, tune_res_dir='tune_res/', tune_sample_num=20, unrolled=False, use_time_embedding=False, weight_decay=2.017075106485636e-05, weight_path='weights/SZ_TAXI_D/search/spos/SPASPOSSearch/20241220_151257_43/epoch_200.pt')
+2024-12-21 13:07:56,427 - [INFO] - Parameter size = 0.300802MB
+2024-12-21 13:09:10,584 - [INFO] - [Epoch:1 | Tune]: Train Loss:3.19
+2024-12-21 13:09:20,971 - [INFO] - [Epoch:1 | Valid]: Loss:0.05147, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 13:10:34,898 - [INFO] - [Epoch:2 | Tune]: Train Loss:0.005342
+2024-12-21 13:10:45,275 - [INFO] - [Epoch:2 | Valid]: Loss:0.02523, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 13:11:58,630 - [INFO] - [Epoch:3 | Tune]: Train Loss:0.002865
+2024-12-21 13:12:08,983 - [INFO] - [Epoch:3 | Valid]: Loss:0.01512, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 13:13:22,922 - [INFO] - [Epoch:4 | Tune]: Train Loss:0.001892
+2024-12-21 13:13:33,383 - [INFO] - [Epoch:4 | Valid]: Loss:0.009949, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 13:14:47,396 - [INFO] - [Epoch:5 | Tune]: Train Loss:0.001274
+2024-12-21 13:14:57,843 - [INFO] - [Epoch:5 | Valid]: Loss:0.007417, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 13:16:12,237 - [INFO] - [Epoch:6 | Tune]: Train Loss:0.00094
+2024-12-21 13:16:22,645 - [INFO] - [Epoch:6 | Valid]: Loss:0.0054, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 13:17:36,251 - [INFO] - [Epoch:7 | Tune]: Train Loss:0.0007396
+2024-12-21 13:17:46,715 - [INFO] - [Epoch:7 | Valid]: Loss:0.004391, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 13:19:00,670 - [INFO] - [Epoch:8 | Tune]: Train Loss:0.0005979
+2024-12-21 13:19:11,196 - [INFO] - [Epoch:8 | Valid]: Loss:0.003871, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 13:20:25,966 - [INFO] - [Epoch:9 | Tune]: Train Loss:0.0004822
+2024-12-21 13:20:36,490 - [INFO] - [Epoch:9 | Valid]: Loss:0.003236, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 13:21:50,542 - [INFO] - [Epoch:10 | Tune]: Train Loss:0.0004039
+2024-12-21 13:22:00,904 - [INFO] - [Epoch:10 | Valid]: Loss:0.00263, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 13:23:14,210 - [INFO] - [Epoch:11 | Tune]: Train Loss:0.0003505
+2024-12-21 13:23:24,712 - [INFO] - [Epoch:11 | Valid]: Loss:0.002159, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 13:24:38,533 - [INFO] - [Epoch:12 | Tune]: Train Loss:0.000301
+2024-12-21 13:24:48,881 - [INFO] - [Epoch:12 | Valid]: Loss:0.002014, MRR:1.0, Hits@10:1.0, Hits@3:1.0, Hits@1:1.0
+2024-12-21 13:24:48,882 - [INFO] - Early stop!
+2024-12-21 13:24:48,882 - [INFO] - 1.0 compgcn_rotate||gru||lc_skip||compgcn_rotate||identity||lc_skip||rgat_vanilla||gru||lf_mean

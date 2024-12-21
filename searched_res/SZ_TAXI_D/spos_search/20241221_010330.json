@@ -1,0 +1,1 @@
+[{"seed": 43, "dataset": "SZ_TAXI_D/", "search_mode": "spos_search", "genotype": "compgcn_rotate||gru||lc_skip||compgcn_rotate||identity||lc_skip||rgat_vanilla||gru||lf_mean"}]
