@@ -10,7 +10,7 @@ from model_list import MODEL
 from preprocess import load_dataset, TemporalDataset
 from utils import initialize_seed, get_name
 
-dim = "dim_128"
+dim = "dim_16"
 args_config = 'saved_models/SZ_TAXI_D/SPASPOSSearch_12_43_all.json'
 
 def get_args():
@@ -65,8 +65,7 @@ def weather_emb(train_loader, model):
         lst.sort()
         node_id = lst[len(lst) // 2]
         print(timestamps, train_graphs[0].edges(), node_id)
-        time_emb.append(list(ent_embed[node_id]))
-    print(np.array(time_emb).shape)
+        time_emb.append(list(ent_embed[node_id].detach().cpu().numpy()))
     pd.DataFrame(np.array(time_emb)).to_csv('./emb/weather/{}.csv'.format(dim), header=False, index=False)
 
 def main():
